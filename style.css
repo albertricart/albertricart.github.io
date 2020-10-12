@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+
+body {
+  background-color: #24272E;
+}
+
+footer {
+  color: white;
+  background-color: #24272E;
+  text-align: center;
+  clear: both;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.js_header {
+  background-color: white;
+  text-align: center;
+  padding: 25px 0;
+}
+
+.js_header > p {
+  padding-top: 5px;
+}
+
+.js_items {
+  color: white;
+  margin: 30px;
+}
+
+.js_item {
+  border: 0.5px solid whitesmoke;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 15px;
+  box-sizing: content-box;
+  transition: all 0.25s ease;
+}
+
+.js_item:hover {
+  cursor: pointer;
+  background-color: #5178d6;
+  font-weight: bold;
+  color: black;
+}
