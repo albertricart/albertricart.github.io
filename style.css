@@ -6,12 +6,12 @@
 }
 
 body {
-  background-color: #24272E;
+  background-color: #24272e;
 }
 
 footer {
   color: white;
-  background-color: #24272E;
+  background-color: #24272e;
   text-align: center;
   clear: both;
   position: absolute;
@@ -49,4 +49,9 @@ footer {
   background-color: #5178d6;
   font-weight: bold;
   color: black;
+}
+
+a:hover, a:visited, a:link, a:active {
+  color: #FFFFFF;
+  text-decoration: none;
 }
