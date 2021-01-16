@@ -5,58 +5,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Albert Ricart</title>
-  <link rel="shortcut icon" href="./img/icon.png" />
+  <link rel="shortcut icon" href="./assets/icon.png" />
   <link rel="stylesheet" href="./style/style.css" />
 
 </head>
 
 <body>
+  <header>
+    <div class="nav-wrapper">
+      <div class="nav">
+        <a href="./index.html" class="logo" style="background-image: url('./assets/logo.png');"></a>
+        <div class="options-wrapper">
+          <div class="options">
+            <a href="./index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+          </div>
 
-  <div class="content">
-    <div class="js_header">
-      <h1>Javascript Code Snippets</h1>
-      <p>Here you can find all my progress in JavaScript.</p>
+          <div class="lang">
+            <button type="button" class="button langBtn">
+              <span data-language="en">English</span>
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-wrapper">
+    <div class="content">
+      <div class="js-wrapper">
+        <div class="js_header">
+          <h1>Javascript Code Snippets</h1>
+          <p>Here you can find all my progress in JavaScript.</p>
+        </div>
+
+
+        <div class="js_items">
+          <h2>Index</h2>
+          <a href="https://jsfiddle.net/albertricart/uayw4mv0/">
+            <div class="js_item" id="primitive_data">
+              <h2>Primitive data</h2>
+              <p>Example showing the uses of primitive variables in JavaScript.</p>
+            </div>
+          </a>
+
+          <a href="https://jsfiddle.net/albertricart/or8q6egd/">
+            <div class="js_item" id="complex_data">
+              <h2>Complex data</h2>
+              <p>Example showing the uses of complex variables in JavaScript.</p>
+            </div>
+          </a>
+
+          <a href="https://jsfiddle.net/albertricart/5k6rwtg0/1/">
+            <div class="js_item" id="complex_data">
+              <h2>Multiplication tables</h2>
+              <p>Example showing the uses of iteration statements.</p>
+            </div>
+          </a>
+
+          <a href="https://jsfiddle.net/albertricart/s61m9o05">
+            <div class="js_item" id="complex_data">
+              <h2>Guess the number</h2>
+              <p>Example showing the uses of function callbacks and conditional statements.</p>
+            </div>
+          </a>
+
+          <a href="https://jsfiddle.net/albertricart/pqhv51nf/">
+            <div class="js_item" id="complex_data">
+              <h2>Working with objects</h2>
+              <p>Example showing the uses of sort function and object methods.</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
     </div>
 
 
-    <div class="js_items">
-      <h2>Index</h2>
-      <a href="https://jsfiddle.net/albertricart/uayw4mv0/">
-        <div class="js_item" id="primitive_data">
-          <h2>Primitive data</h2>
-          <p>Example showing the uses of primitive variables in JavaScript.</p>
-        </div>
-      </a>
-
-      <a href="https://jsfiddle.net/albertricart/or8q6egd/">
-        <div class="js_item" id="complex_data">
-          <h2>Complex data</h2>
-          <p>Example showing the uses of complex variables in JavaScript.</p>
-        </div>
-      </a>
-
-      <a href="https://jsfiddle.net/albertricart/5k6rwtg0/1/">
-        <div class="js_item" id="complex_data">
-          <h2>Multiplication tables</h2>
-          <p>Example showing the uses of iteration statements.</p>
-        </div>
-      </a>
-
-      <a href="https://jsfiddle.net/albertricart/s61m9o05">
-        <div class="js_item" id="complex_data">
-          <h2>Guess the number</h2>
-          <p>Example showing the uses of function callbacks and conditional statements.</p>
-        </div>
-      </a>
-
-      <a href="https://jsfiddle.net/albertricart/pqhv51nf/">
-        <div class="js_item" id="complex_data">
-          <h2>Working with objects</h2>
-          <p>Example showing the uses of sort function and object methods.</p>
-        </div>
-      </a>
-
-    </div>
   </div>
 
   <footer>

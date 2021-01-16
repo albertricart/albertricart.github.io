@@ -43,6 +43,12 @@
   src: url("../fonts/Inter/Inter-Thin.ttf") format("truetype");
   font-weight: 200;
   font-style: normal; }
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none; }
+
 * {
   margin: 0;
   padding: 0;
@@ -50,25 +56,71 @@
   font-family: "Inter", sans-serif; }
 
 body {
-  background-color: #24272e; }
+  background-color: grey; }
 
 footer {
-  color: white;
-  background-color: #24272e;
-  text-align: center;
-  clear: both;
-  position: absolute;
-  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh; }
+
+header {
+  min-width: 773px;
+  background-color: #24272E;
+  box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
+  position: sticky; }
+
+.nav {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 50px; }
+
+.logo {
+  width: 200px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 180px; }
+
+.options-wrapper {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
-  height: 2.5rem; }
+  align-items: center; }
+
+.options {
+  font-weight: 700;
+  font-size: 20px;
+  min-width: 400px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 30px;
+  padding-right: 30px; }
+  .options a {
+    transition: all 0.25s ease-in-out;
+    color: white; }
+    .options a:hover {
+      color: #749EF8; }
+
+.content {
+  color: black;
+  padding-left: 10px;
+  padding-right: 10px; }
+  .content a {
+    transition: all 0.25s ease-in-out;
+    color: black; }
+    .content a:hover {
+      color: #749EF8; }
 
 .js_header {
-  background-color: white;
-  text-align: center;
-  padding: 25px 0; }
-
-.js_header > p {
-  padding-top: 5px; }
+  text-align: center; }
+  .js_headerp {
+    padding-top: 5px; }
 
 .js_items {
   color: white;
@@ -81,18 +133,27 @@ footer {
   padding: 15px;
   box-sizing: content-box;
   transition: all 0.25s ease; }
+  .js_item:hover {
+    cursor: pointer;
+    background-color: #5178d6;
+    font-weight: bold;
+    color: black; }
 
-.js_item:hover {
+.button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 500;
+  align-items: center;
+  transition: all 0.2s ease-in;
+  outline: none;
   cursor: pointer;
-  background-color: #5178d6;
-  font-weight: bold;
-  color: black; }
+  box-shadow: inset 0px 0px 1px 3px rgba(128, 128, 128, 0.699); }
 
-a:hover, a:visited, a:link, a:active {
-  color: #FFFFFF;
-  text-decoration: none; }
-
-.footer {
-  position: sticky; }
+.langBtn {
+  display: inline-flex;
+  background-color: #F5F5F5; }
+  .langBtn:hover {
+    box-shadow: inset 0px 0px 1px 3px #749EF8; }
 
 /*# sourceMappingURL=style.css.map */
