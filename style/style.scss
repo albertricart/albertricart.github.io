@@ -114,6 +114,15 @@ header {
   margin-right: 50px;
 }
 
+.nav-trail{
+  width: 100%;
+  min-width: 165px;
+  max-width: 175px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
   width: 200px;
   height: 50px;
@@ -121,6 +130,16 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 180px;
+}
+
+.icon{
+  fill: white;
+  transition: all 0.25s ease-in-out;
+  
+  &:hover{
+    fill: $color-secondary;
+    cursor: pointer;
+  }
 }
 
 .options-wrapper {
