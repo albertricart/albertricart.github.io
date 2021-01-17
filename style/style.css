@@ -56,7 +56,7 @@ a:active {
   font-family: "Inter", sans-serif; }
 
 body {
-  background-color: grey; }
+  background-color: whitesmoke; }
 
 footer {
   display: flex;
@@ -124,35 +124,29 @@ header {
 
 .content {
   color: black;
-  padding-left: 10px;
-  padding-right: 10px; }
+  padding-left: 50px;
+  padding-right: 50px; }
   .content a {
     transition: all 0.25s ease-in-out;
     color: black; }
     .content a:hover {
       color: #749EF8; }
 
-.js_header {
-  text-align: center; }
-  .js_headerp {
-    padding-top: 5px; }
-
-.js_items {
-  color: white;
-  margin: 30px; }
+.js-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 1.5rem;
+  grid-auto-columns: auto; }
 
 .js_item {
-  border: 0.5px solid whitesmoke;
-  border-radius: 5px;
-  margin-top: 15px;
-  padding: 15px;
-  box-sizing: content-box;
-  transition: all 0.25s ease; }
+  color: white;
+  background-color: #24272E;
+  border-radius: 16px;
+  transition: all 0.25s ease;
+  padding: 48px 24px;
+  box-shadow: 0px 13px 10px -10px rgba(0, 0, 0, 0.75); }
   .js_item:hover {
-    cursor: pointer;
-    background-color: #5178d6;
-    font-weight: bold;
-    color: black; }
+    cursor: pointer; }
 
 .button {
   padding: 8px 12px;
