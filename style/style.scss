@@ -74,8 +74,9 @@ $js-yellow: #f7df1e;
 $ev-yellow: #e59808;
 $recomercem-red: #B51D19;
 
-@mixin cardHeader($color) {
-  background-color: $color;
+@mixin cardHeader($bg-color, $color) {
+  color: $color;
+  background-color: $bg-color;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
   padding-top: 1rem;
   padding-left: 1rem;
@@ -222,16 +223,16 @@ header {
 
 
 .recomercem-header{
-  @include cardHeader($recomercem-red);
+  @include cardHeader($recomercem-red, white);
 }
 
 .js-header{
-  @include cardHeader($js-yellow);
+  @include cardHeader($js-yellow, black);
 }
 
 
 .ev-header{
-  @include cardHeader($ev-yellow);
+  @include cardHeader($ev-yellow, black);
 }
 
 .grid-item {
@@ -250,24 +251,15 @@ header {
   }
 }
 
-.recomercem-grid-container {
+
+
+.grid-container {
   padding: 2rem 2rem 5rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
   gap: 1.5rem;
   grid-auto-columns: auto;
 }
-
-
-.js-grid-container {
-  padding: 2rem 2rem 5rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: 1.5rem;
-  grid-auto-columns: auto;
-}
-
-
 
 
 .itemLink{
