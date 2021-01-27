@@ -69,6 +69,7 @@ $color-accent: #F4AA0B;
 $color-dark: #24272E;
 $color-light: #749EF8;
 $color-grey: #F5F5F5;
+$c_dark_blue: #131f41;
 
 $js-yellow: #f7df1e;
 $ev-yellow: #e59808;
@@ -92,6 +93,19 @@ a:active {
   text-decoration: none;
 }
 
+:root{
+  --blue: #{$color-primary};
+  --lightBlue: #{$color-light};
+  --darkBlue: #{$c_dark_blue};
+  --yellow: #{$color-accent};
+  --jsYellow: #{$js-yellow};
+  --evYellow: #{$ev-yellow};
+  --recomercemRed: #{$recomercem-red};
+}
+
+html{
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -113,7 +127,7 @@ footer {
 
 header {
   min-width: 773px;
-  background-color: $color-dark;
+  background-color: $c_dark_blue;
   box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
   position: sticky;
 
@@ -177,10 +191,6 @@ header {
   a {
     transition: all 0.25s ease-in-out;
     color: white;
-
-    &:hover {
-      color: $color-light;
-    }
   }
 
 }
@@ -215,7 +225,7 @@ header {
 .cardSection-wrapper {
   margin-bottom: 2rem;
   border-radius: 24px;
-  background-color: lightgray;
+  background-color: whitesmoke;
   overflow: hidden;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
 
@@ -245,7 +255,7 @@ header {
 
 
   &:hover {
-    transform: scale(1.02);
+    transform: scale(1.025);
     cursor: pointer;
     box-shadow: 0px 13px 10px -4px rgba(0, 0, 0, 0.25);
   }
@@ -266,6 +276,27 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.fab{
+  width: 62px;
+  height: 62px;
+  background-color:#F44336;
+  border-radius: 360px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+
+  &:hover{
+    transform: scale(1.15);
+  }
 }
 
 @function rem($px) {

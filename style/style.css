@@ -68,6 +68,20 @@ a:active {
   text-decoration: none;
 }
 
+:root {
+  --blue: #0B55F3;
+  --lightBlue: #749EF8;
+  --darkBlue: #131f41;
+  --yellow: #F4AA0B;
+  --jsYellow: #f7df1e;
+  --evYellow: #e59808;
+  --recomercemRed: #B51D19;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -95,7 +109,7 @@ footer {
 
 header {
   min-width: 773px;
-  background-color: #24272E;
+  background-color: #131f41;
   -webkit-box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
   position: -webkit-sticky;
@@ -184,10 +198,6 @@ header {
   color: white;
 }
 
-.options a:hover {
-  color: #749EF8;
-}
-
 .button {
   padding: 8px 12px;
   border-radius: 5px;
@@ -225,7 +235,7 @@ header {
 .cardSection-wrapper {
   margin-bottom: 2rem;
   border-radius: 24px;
-  background-color: lightgray;
+  background-color: whitesmoke;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
@@ -279,8 +289,8 @@ header {
 }
 
 .grid-item:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
   cursor: pointer;
   -webkit-box-shadow: 0px 13px 10px -4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 13px 10px -4px rgba(0, 0, 0, 0.25);
@@ -306,5 +316,36 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.fab {
+  width: 62px;
+  height: 62px;
+  background-color: #F44336;
+  border-radius: 360px;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.fab:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 /*# sourceMappingURL=style.css.map */

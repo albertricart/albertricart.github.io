@@ -1,11 +1,26 @@
-var primitive = document.getElementById("primitive_data");
-var complex = document.getElementById("complex_data");
+var fab = document.getElementById('fab');
+var header = document.getElementById('header');
 
-function openUrl(url){
-    window.open(url, '_blank');
+var initialPos = 0;
+
+window.onscroll = function () { manageScroll() };
+
+
+
+function manageScroll() {
+    console.log(window.scrollY);
+    if (window.scrollY != initialPos) {
+
+        if (window.scrollY >= initialPos) {
+            fab.style.transform = "scale(0)";
+            // fab.style.transform = "translateX(90px)";
+        } else {
+            fab.style.transform = "scale(1)";
+            // fab.style.transform = "translateX(0px)";
+        }
+        initialPos = window.scrollY;
+
+    }
+
+
 }
-
-primitive.addEventListener('click', () => openUrl("https://jsfiddle.net/albertricart/uayw4mv0/"));
-complex.addEventListener('click', () => openUrl("https://jsfiddle.net/albertricart/or8q6egd/"));
-
-
