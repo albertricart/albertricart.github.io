@@ -55,7 +55,7 @@ function recognizeInput(input) {
 function manageCommand(command, argument) {
     switch (command.trim()) {
         case "help":
-            mensaje = "List of available commands:<br>\t·cd<br>\t·ls"
+            mensaje = "List of available commands: cd, ls, cat, username"
             alert(mensaje);
             break;
 
@@ -87,7 +87,7 @@ function manageCommand(command, argument) {
             break;
 
         case "username":
-            alert('changing username ' + username.dataset.username + ' to...' + argument);
+            alert('changing username from ' + username.dataset.username + ' to...' + argument);
             username.dataset.username = argument;
             username.innerHTML = argument + "@portfolioAR";
             break;
