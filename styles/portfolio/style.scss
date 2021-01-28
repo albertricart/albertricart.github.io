@@ -1,79 +1,4 @@
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-Regular.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-Light.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-ExtraLight.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('../fonts/Inter/Inter-Thin.ttf') format('truetype');
-  font-weight: 200;
-  font-style: normal;
-}
-
-$font: "Inter",
-sans-serif;
-$color-primary: #0B55F3;
-$color-secondary: #5178d6;
-$color-accent: #F4AA0B;
-$color-dark: #24272E;
-$color-light: #749EF8;
-$color-grey: #F5F5F5;
-$c_dark_blue: #131f41;
-
-$js-yellow: #f7df1e;
-$ev-yellow: #e59808;
-$recomercem-red: #B51D19;
+@import '../variables';
 
 @mixin cardHeader($bg-color, $color) {
   color: $color;
@@ -93,15 +18,6 @@ a:active {
   text-decoration: none;
 }
 
-:root{
-  --blue: #{$color-primary};
-  --lightBlue: #{$color-light};
-  --darkBlue: #{$c_dark_blue};
-  --yellow: #{$color-accent};
-  --jsYellow: #{$js-yellow};
-  --evYellow: #{$ev-yellow};
-  --recomercemRed: #{$recomercem-red};
-}
 
 html{
   scroll-behavior: smooth;
@@ -131,6 +47,13 @@ header {
   box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
   position: sticky;
 
+}
+
+.container{
+  width: 100%;
+  max-width: 1700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -299,6 +222,3 @@ header {
   }
 }
 
-@function rem($px) {
-  @return $px / $font_size+rem;
-}
