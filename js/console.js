@@ -33,13 +33,26 @@ function recognizeInput(input) {
     var command = "";
     var i = 0;
 
-    while (i <= input.length && input[i].charCodeAt(0) != 32) {
-        command += input[i];
-        i++;
-    }
+    if (!input.includes(" ")) {
+        manageCommand(input);
+    } else {
+        while (i <= input.length && input[i].charCodeAt(0) != 32) {
+            command += input[i];
+            i++;
+        }
 
-    var argument = input.substring(command.trim().length).trim();
-    
+        var argument = input.substring(command.trim().length).trim();
+
+        if (argument == "") {
+            alert(input + ' is not a command');
+        } else {
+            manageCommand(command, argument);
+        }
+
+    }
+}
+
+function manageCommand(command, argument) {
     switch (command.trim()) {
         case "help":
             mensaje = "List of available commands:<br>\t·cd<br>\t·ls"
@@ -47,11 +60,30 @@ function recognizeInput(input) {
             break;
 
         case "cd":
-            alert('moving to...' + argument);
+            if (argument) {
+                alert('moving to...' + argument);
+            } else {
+                alert('specify directory...');
+            }
+
             break;
 
         case "ls":
-            alert('listing from...' + argument);
+            if(argument){
+                alert('listing ' + argument + ' directory');
+            }else{
+                alert('listing current directory');
+            }
+            
+            break;
+
+        case "cat":
+            if (argument) {
+                alert('showing ' + argument);
+            } else {
+                alert('specify file...');
+            }
+
             break;
 
         case "username":
@@ -66,5 +98,4 @@ function recognizeInput(input) {
             alert(mensaje);
             break;
     }
-
 }
