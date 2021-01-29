@@ -1,14 +1,14 @@
+var username = document.querySelector("#username");
 var dir = document.querySelector("#dir");
 var userInput = document.querySelector("#userInput");
-var username = document.querySelector("#username");
 var console = document.querySelector(".console");
+var console_prompt = document.querySelectorAll(".console__prompt");
+var commandList = ["cd", "ls", "cat", "username", "help", "man"];
 
 console.onclick = function () { userInput.focus() };
 userInput.onkeypress = manageInput;
 
-
-var welcomeMsg = "Welcome! This doesn't seem like the usual portfolio home page? Let me introduce myself, I'm Albert Ricart, a 20 year old studying web development with previous knowledge in app development"
-var currentDir = "C:/";
+var currentDir = dir.dataset.dir;
 
 var directories = [
     ['/', ['home', 'portfolio', 'about', 'contact']],
@@ -19,16 +19,37 @@ moveToDir(currentDir);
 
 
 function moveToDir(dirName) {
-    dir.innerHTML += dirName + '>';
+    dir.innerHTML += "C:/" + dirName + '>';
 }
 
 function manageInput(e) {
     var keynum = e.keyCode || e.which;
 
     if (keynum == 13) {
-        //test
+        userInput.disabled = true;
 
-        recognizeInput(userInput.value.trim());
+
+        //message to display
+        var displayMessage = document.createElement("p");
+        displayMessage.innerHTML = recognizeInput(userInput.value.trim());
+        console_prompt[console_prompt.length - 1].appendChild(displayMessage);
+
+        console_prompt[console_prompt.length - 1].appendChild(username.cloneNode(true));
+        console_prompt[console_prompt.length - 1].appendChild(dir.cloneNode(true));
+
+
+
+        var newUserInput = document.createElement("input");
+        newUserInput.type = "text";
+        newUserInput.id = "userInput";
+
+        userInput = newUserInput;
+
+        //append to last element
+        console_prompt[console_prompt.length - 1].appendChild(userInput);
+
+        userInput.focus();
+        userInput.onkeypress = manageInput;
     }
 
 }
@@ -37,9 +58,10 @@ function manageInput(e) {
 function recognizeInput(input) {
     var command = "";
     var i = 0;
+    let message;
 
     if (!input.includes(" ")) {
-        manageCommand(input);
+        message = manageCommand(input);
     } else {
         while (i <= input.length && input[i].charCodeAt(0) != 32) {
             command += input[i];
@@ -49,58 +71,69 @@ function recognizeInput(input) {
         var argument = input.substring(command.trim().length).trim();
 
         if (argument == "") {
-            alert(input + ' is not a command');
+            message = input + ' is not a command';
         } else {
-            manageCommand(command, argument);
+            message = manageCommand(command, argument);
         }
 
     }
+
+    return message;
 }
 
 function manageCommand(command, argument) {
+    let message;
     switch (command.trim()) {
         case "help":
-            mensaje = "List of available commands: cd, ls, cat, username"
-            alert(mensaje);
+            message = "List of available commands: " + commandList;
             break;
 
         case "cd":
             if (argument) {
-                alert('moving to...' + argument);
+                message = 'moving to...' + argument;
             } else {
-                alert('specify directory...');
+                message = 'specify directory...';
             }
 
             break;
 
         case "ls":
             if (argument) {
-                alert('listing ' + argument + ' directory');
+                message = 'listing ' + argument + ' directory';
             } else {
-                alert('listing current directory');
+                message = "";
             }
 
             break;
 
         case "cat":
             if (argument) {
-                alert('showing ' + argument);
+                message = 'showing ' + argument;
             } else {
-                alert('specify file...');
+                message = 'specify file...';
             }
 
             break;
 
         case "username":
-            alert('changing username from ' + username.dataset.username + ' to...' + argument);
+            message = 'changing username from ' + username.dataset.username + ' to...' + argument;
             username.dataset.username = argument;
             username.innerHTML = argument + "@portfolioAR";
             break;
 
+        case "man":
+            switch(argument){
+                case "cd":
+
+                    break;
+            }
+            break;
+
 
         default:
-            mensaje = "'" + command + "' is not a command";
-            alert(mensaje);
+            message = "'" + command + "' is not a command";
             break;
     }
+
+    return message;
 }

@@ -138,9 +138,17 @@ a {
   overflow-x: auto;
 }
 
+.console__prompt__userinfo {
+  margin-top: 15px;
+}
+
 .console:hover {
   -webkit-box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.5);
           box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.5);
+}
+
+.console p {
+  margin-top: 3px;
 }
 
 #username {
@@ -184,5 +192,17 @@ input[type="text"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.blueText {
+  color: blue;
+}
+
+.orangeText {
+  color: orange;
+}
+
+.greenText {
+  color: lime;
 }
 /*# sourceMappingURL=home.css.map */
