@@ -26,6 +26,8 @@ function manageInput(e) {
     var keynum = e.keyCode || e.which;
 
     if (keynum == 13) {
+        //t
+
         recognizeInput(userInput.value.trim());
     }
 
