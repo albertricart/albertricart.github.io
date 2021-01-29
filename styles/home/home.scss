@@ -1,36 +1,97 @@
 @import '../variables';
 
-body{
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     background-color: black;
-    background-color: $c_dark_blue;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     color: lightgray;
+    height: 100vh;
+    position: relative;
 }
 
-.container{
-    position: relative;
-    max-width: 900px;
-    padding: 5px;
+a {
+    text-decoration: none;
+    color: white;
+}
 
-    &__console{
-        display: inline;
-        position: absolute;
-        background-color: black;
+.container {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+}
+
+.console {
+    transition: all 0.2s ease-in;
+    border: 1px solid rgb(37, 37, 37);
+    box-shadow: 0px 0px 30px 0px rgba(75, 75, 75, 0.5);
+
+    &__header {
+        padding-bottom: 3px;
         width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        font-family: Arial;
+    }
+
+    &__prompt{
         height: 600px;
-        box-shadow: 0px 2px 30px 3px rgba(200, 200, 200, 0.3);
+        font-weight: bold;
+        overflow-y: scroll;
+        overflow-x: auto;
+
+        &__userinfo{
+
+        }
+    }
+
+    &:hover{
+        box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.5);
     }
 }
 
+#username {
+    color: rgb(0, 255, 0);
+}
 
-input[type="text"]{
-    margin-top: 5px;
+#dir {
+    color: aqua;
+}
+
+
+input[type="text"] {
     width: 99%;
+    background-color: black;
+    margin-top: 4px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     outline: none;
     border: none;
     color: lightgray;
-    background-color: black;
+
+}
+
+
+
+
+.close {
+    padding: 8px 20px;
+    transition: all ease-in-out 0.1s;
+    user-select: none;
+    &:hover {
+        background-color: red;
+        cursor: pointer;
+    }
+}
+
+.icon {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 10px;
+    user-select: none;
 }

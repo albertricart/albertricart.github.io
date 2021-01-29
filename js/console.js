@@ -1,10 +1,13 @@
 var dir = document.querySelector("#dir");
 var userInput = document.querySelector("#userInput");
 var username = document.querySelector("#username");
+var console = document.querySelector(".console");
+
+console.onclick = function () { userInput.focus() };
 userInput.onkeypress = manageInput;
 
 
-
+var welcomeMsg = "Welcome! This doesn't seem like the usual portfolio home page? Let me introduce myself, I'm Albert Ricart, a 20 year old studying web development with previous knowledge in app development"
 var currentDir = "C:/";
 
 var directories = [
@@ -69,12 +72,12 @@ function manageCommand(command, argument) {
             break;
 
         case "ls":
-            if(argument){
+            if (argument) {
                 alert('listing ' + argument + ' directory');
-            }else{
+            } else {
                 alert('listing current directory');
             }
-            
+
             break;
 
         case "cat":

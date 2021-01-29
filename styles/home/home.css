@@ -81,37 +81,108 @@
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: black;
-  background-color: #131f41;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   color: lightgray;
+  height: 100vh;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .container {
-  position: relative;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   max-width: 900px;
-  padding: 5px;
 }
 
-.container__console {
-  display: inline;
-  position: absolute;
-  background-color: black;
+.console {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  border: 1px solid #252525;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(75, 75, 75, 0.5);
+          box-shadow: 0px 0px 30px 0px rgba(75, 75, 75, 0.5);
+}
+
+.console__header {
+  padding-bottom: 3px;
   width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: Arial;
+}
+
+.console__prompt {
   height: 600px;
-  -webkit-box-shadow: 0px 2px 30px 3px rgba(200, 200, 200, 0.3);
-          box-shadow: 0px 2px 30px 3px rgba(200, 200, 200, 0.3);
+  font-weight: bold;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
+
+.console:hover {
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.5);
+          box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.5);
+}
+
+#username {
+  color: lime;
+}
+
+#dir {
+  color: aqua;
 }
 
 input[type="text"] {
-  margin-top: 5px;
   width: 99%;
+  background-color: black;
+  margin-top: 4px;
   font-family: 'Courier New', Courier, monospace;
   font-size: 16px;
   outline: none;
   border: none;
   color: lightgray;
-  background-color: black;
+}
+
+.close {
+  padding: 8px 20px;
+  -webkit-transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.1s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.close:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.icon {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=home.css.map */

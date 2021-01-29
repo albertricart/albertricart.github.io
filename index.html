@@ -13,10 +13,18 @@
 <body>
 
   <div class="container">
-    <div class="container__console">
-      <span id="username" data-username="visitor" style="margin-right: 8px;">visitor@portfolioAR</span><span
-        id="dir"></span>
-      <input type="text" id="userInput" autofocus onkeypress="manageInput(event)">
+    <div class="console">
+      <div class="console__header">
+        <div class="icon">>_ Command Prompt</div>
+        <a href="portfolio.html" class="close">X</a>
+      </div>
+      <div class="console__prompt">
+        <div class="console__prompt__userinfo">
+          <span id="username" data-username="visitor" style="margin-right: 8px;">visitor@portfolioAR</span><span
+            id="dir"></span>
+        </div>
+        <input type="text" id="userInput" autofocus onkeypress="manageInput(event)">
+      </div>
     </div>
   </div>
 
