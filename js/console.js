@@ -1,12 +1,42 @@
+//TO-DO: document.title = "sectionA, recomercem, etc... | Albert Ricart" 
+
+
 var username = document.querySelector("#username");
 var dir = document.querySelector("#dir");
 var userInput = document.querySelector("#userInput");
 var console = document.querySelector(".console");
+var welcomePrompt = document.querySelector("#welcomePrompt");
 var console_prompt = document.querySelectorAll(".console__prompt");
 var commandList = ["cd", "ls", "cat", "username", "help", "man"];
 
 console.onclick = function () { userInput.focus() };
+
 userInput.onkeypress = manageInput;
+welcomePrompt.oninput = manageWelcomeInput;
+welcomePrompt.onkeypress = function (e) {
+    var keynum = e.keyCode || e.which;
+    if (keynum == 13) {
+        if (welcomePrompt.value == "yes") {
+            welcomePrompt.disabled = true;
+            userInput.disabled = false;
+            userInput.focus();
+        }
+        else if (welcomePrompt.value == "no") {
+            window.location.href = "https://albertricart.github.io/home.html";
+        }
+    }
+};
+
+function manageWelcomeInput() {
+    if (welcomePrompt.value == "yes") {
+        welcomePrompt.style.color = "lime";
+    } else if (welcomePrompt.value == "no") {
+        welcomePrompt.style.color = "orange";
+    } else {
+        welcomePrompt.style.color = "lightgray";
+    }
+}
+
 
 var currentDir = dir.dataset.dir;
 
@@ -122,7 +152,7 @@ function manageCommand(command, argument) {
             break;
 
         case "man":
-            switch(argument){
+            switch (argument) {
                 case "cd":
 
                     break;

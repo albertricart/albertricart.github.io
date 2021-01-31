@@ -22,13 +22,13 @@
         <p>Oh hi!</p>
         <p>Welcome, this doesn't seem like the usual portfolio home page? <br> Let me introduce myself, I'm <strong class="blueText">Albert Ricart</strong>, a 20 year old studying <strong class="blueText">web development</strong> with previous knowledge in <strong class="blueText">app development</strong>.</p>
         <p>The main purpose of this <strong class="blueText">console</strong> I created is for you to freely move wherever section you want and get to know me better as you go on.</p>
-        <p style="margin-bottom: 0px;">So, if you want to make this visit to my portfolio a bit <strong class="blueText">different</strong>, type '<span class="greenText">yes</span>', if not then you will be redirected to a traditional looking type portfolio by typing '<span class="orangeText">no</span>'...</p>
-        <input type="text" autofocus>
+        <p style="margin-bottom: 0px;">So, if you want to make this visit to my portfolio a bit <strong class="blueText">different</strong>, type '<span class="greenText">yes</span>', if not then you will be redirected to a more traditional looking type portfolio by typing '<span class="orangeText">no</span>'...</p>
+        <input type="text" id="welcomePrompt" style="font-weight: bold;" autofocus>
         <div class="console__prompt__userinfo">
           <span id="username" data-username="visitor" style="margin-right: 8px;">visitor@portfolioAR</span><span
             id="dir" data-dir=""></span>
         </div>
-        <input type="text" id="userInput" onkeypress="manageInput(event)">
+        <input type="text" id="userInput" disabled>
       </div>
     </div>
   </div>

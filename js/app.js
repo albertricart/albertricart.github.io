@@ -8,7 +8,6 @@ window.onscroll = function () { manageScroll() };
 
 
 function manageScroll() {
-    console.log(window.scrollY);
     if (window.scrollY != initialPos) {
 
         if (window.scrollY >= initialPos) {
