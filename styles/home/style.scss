@@ -9,7 +9,13 @@
   padding-bottom: 1rem;
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 130px;
 }
+
+
 
 a:hover,
 a:visited,
@@ -118,6 +124,16 @@ header {
 
 }
 
+.cmd-link{
+
+
+  &__icon{
+    width: 128px;
+    height: 64px;
+    object-fit: cover;
+  }
+}
+
 .button {
   padding: 8px 12px;
   border-radius: 5px;
@@ -154,6 +170,13 @@ header {
 
 }
 
+.header-icon{
+  margin-right: 16px;
+}
+
+.diw-header{
+  @include cardHeader($diw-blue, white);
+}
 
 .recomercem-header{
   @include cardHeader($recomercem-red, white);
