@@ -212,7 +212,7 @@ header {
 .grid-container {
   padding: 2rem 2rem 5rem 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   grid-auto-columns: auto;
 }

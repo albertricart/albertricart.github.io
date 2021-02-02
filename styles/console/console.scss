@@ -40,24 +40,29 @@ a {
         font-family: Arial;
     }
 
-    &__prompt {
+    &__body {
         height: 600px;
         font-weight: bold;
         overflow-y: scroll;
         overflow-x: auto;
 
-        &__userinfo{
+        &__prompt{
             margin-top: 30px;
+
+            p {
+                margin-top: 3px;
+                margin-bottom: 0;
+            }
         }
+
+        
     }
 
     &:hover {
         box-shadow: 0px 0px 30px 0px rgba(100, 100, 100, 0.5);
     }
 
-    p {
-        margin-top: 3px;
-    }
+    
 }
 
 #username {

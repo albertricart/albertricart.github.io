@@ -383,8 +383,8 @@ header {
   padding: 2rem 2rem 5rem 2rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(600px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   grid-auto-columns: auto;
 }

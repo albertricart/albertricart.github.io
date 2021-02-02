@@ -5,8 +5,8 @@ var username = document.querySelector("#username");
 var dir = document.querySelector("#dir");
 var userInput = document.querySelector("#userInput");
 var console = document.querySelector(".console");
+var console_body = document.querySelector(".console__body");
 var welcomePrompt = document.querySelector("#welcomePrompt");
-var console_prompt = document.querySelectorAll(".console__prompt");
 var commandList = ["cd", "ls", "cat", "username", "help", "man"];
 
 console.onclick = function () { userInput.focus() };
@@ -53,36 +53,23 @@ function moveToDir(dirName) {
 }
 
 function manageInput(e) {
-    var keynum = e.keyCode || e.which;
+    let keynum = e.keyCode || e.which;
 
     if (keynum == 13) {
         userInput.disabled = true;
+        let console_prompts = document.querySelectorAll(".console__body__prompt");
 
-
-        //message to display
-        var displayMessage = document.createElement("p");
+        //message to display to previous prompt
+        let displayMessage = document.createElement("p");
         displayMessage.innerHTML = recognizeInput(userInput.value.trim());
-        console_prompt[console_prompt.length - 1].appendChild(displayMessage);
+        console_prompts[console_prompts.length - 1].appendChild(displayMessage);
 
-        console_prompt[console_prompt.length - 1].appendChild(username.cloneNode(true));
-        console_prompt[console_prompt.length - 1].appendChild(dir.cloneNode(true));
-
-
-
-        var newUserInput = document.createElement("input");
-        newUserInput.type = "text";
-        newUserInput.id = "userInput";
-
-        userInput = newUserInput;
-
-        //append to last element
-        console_prompt[console_prompt.length - 1].appendChild(userInput);
-
-        userInput.focus();
-        userInput.onkeypress = manageInput;
+        createNewPrompt();
     }
 
 }
+
+
 
 
 function recognizeInput(input) {
@@ -151,6 +138,13 @@ function manageCommand(command, argument) {
             username.innerHTML = argument + "@portfolioAR";
             break;
 
+        case "clear":
+            document.querySelectorAll(".console__body__prompt").forEach(prompt =>{
+                prompt.remove();
+            });
+            break;
+
+
         case "man":
             switch (argument) {
                 case "cd":
@@ -166,4 +160,26 @@ function manageCommand(command, argument) {
     }
 
     return message;
+}
+
+function createNewPrompt() {
+    //creation of new prompt
+    let newPrompt = document.createElement("div");
+    newPrompt.classList.add("console__body__prompt");
+    console_body.appendChild(newPrompt);
+
+    newPrompt.appendChild(username.cloneNode(true));
+    newPrompt.appendChild(dir.cloneNode(true));
+
+    let newUserInput = document.createElement("input");
+    newUserInput.type = "text";
+    newUserInput.id = "userInput";
+
+    userInput = newUserInput;
+
+    //append to last element
+    newPrompt.appendChild(userInput);
+
+    userInput.focus();
+    userInput.onkeypress = manageInput;
 }
