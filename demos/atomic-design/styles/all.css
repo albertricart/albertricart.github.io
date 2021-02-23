@@ -1,0 +1,3 @@
+@import './global.css';
+@import "../components/plato/plato.css";
+@import "../components/pedido/pedido.css";

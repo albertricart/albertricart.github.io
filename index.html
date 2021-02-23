@@ -6,17 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Albert Ricart</title>
   <link rel="shortcut icon" href="./assets/icons/icon.png" />
-  <link rel="stylesheet" href="./styles/console/console.css" />
-
+  <link rel="stylesheet" href="./styles/app.css" />
 </head>
 
 <body>
-
-  <div class="container">
-    <div class="console">
+  <div class="console-wrapper">
+    <div class="console-container">
       <div class="console__header">
-        <div class="icon">>_ Command Prompt</div>
-        <a href="home.html" class="close">X</a>
+        <div class="console__header__icon">>_ Command Prompt</div>
+        <a href="home.html" class="close-console">X</a>
       </div>
       <div class="console__body">
 
@@ -28,21 +26,26 @@
           <p>The main purpose of this <strong class="blueText">console</strong> I created is for you to freely move
             wherever section you want and get to know me better as you go on.</p>
           <p style="margin-bottom: 0px;">So, if you want to make this visit to my portfolio a bit <strong
-              class="blueText">different</strong>, type '<span class="greenText">yes</span>' and press 'Enter', if not then you will be
-            redirected to a more traditional looking type portfolio by typing '<span class="orangeText">no</span>' and pressing 'Enter'...
+              class="blueText">different</strong>, type '<span class="greenText">yes</span>' and press 'Enter', if not
+            then you will be
+            redirected to a more traditional looking type portfolio by typing '<span class="orangeText">no</span>' and
+            pressing 'Enter'...
           </p>
-          <input type="text" id="welcomePrompt" style="font-weight: bold;" autofocus autocomplete="off">
+          <input type="text" id="welcomePrompt" class="consoleInput" style="font-weight: bold;" autofocus
+            autocomplete="off">
         </div>
 
         <div class="console__body__prompt">
           <span id="username" data-username="visitor" style="margin-right: 8px;">visitor@portfolioAR</span><span
             id="dir" data-dir=""></span>
-          <input type="text" id="userInput" disabled autocomplete="off">
+          <input type="text" id="userInput" class="consoleInput" disabled autocomplete="off">
         </div>
 
       </div>
+
     </div>
   </div>
+
 
 </body>
 

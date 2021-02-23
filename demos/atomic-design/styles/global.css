@@ -1,0 +1,67 @@
+* {
+    font-family: "Arial";
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: whitesmoke;
+    margin: 0;
+  }
+  
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    .container {
+      width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      width: 720px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container {
+      width: 960px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px;
+    }
+  }
+  
+  .plato-grid {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: start;
+  }
+  
+  @media (min-width: 500px) {
+    .plato-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 800px) {
+    .plato-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1150px) {
+    .plato-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

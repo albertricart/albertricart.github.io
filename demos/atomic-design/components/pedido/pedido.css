@@ -1,0 +1,52 @@
+.pedido{
+    position: fixed;
+    bottom: 0;
+    right: 4px;
+    width: 380px;
+    background-color: white;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(93px);
+    transition: all ease 0.5s;
+  }
+  
+  .pedido__header{
+    padding: 16px 24px;
+    width: 100%;
+    background-color: rgba(0, 168, 0, 0.555);
+    border-radius: inherit;
+    color: white;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 26px;
+    user-select: none;
+  }
+  
+  
+  .pedido__header:hover{
+    cursor: pointer;
+  }
+  
+  
+  .pedido__body{
+    padding: 16px 24px;
+    background-color: white;
+  }
+  
+  .pedido__body__plato{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pedido__body__total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pedido__header__close{
+    transform: rotate(90deg);
+  }
