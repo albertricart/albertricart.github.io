@@ -8,28 +8,135 @@ var welcomePrompt = document.querySelector("#welcomePrompt");
 var commandList = ["cd", "ls", "cat", "username", "help", "man", "clear", "leave"];
 const directories = {
     "/": {
-        home: {
-
-        },
-
+        home: {},
         portfolio: {
-            projects:{
-                recomercem:{},
-                cepsem:{},
-                ev:{},
+            projects: {
+                mnactec: {
+                    github: {
+                        link: "https://github.com/Marc-Ferrer-Castillo/QuizGame",
+                    },
+                    readme: {
+                        text: ""
+                    }
+                },
+                chrysallis: {
+                    github: {
+                        app: {
+                            link: "https://github.com/JRiberaG/MeetChrysallis",
+                        },
+
+                        backend: {
+                            link: "https://github.com/albertricart/Projecte-Chrysallis",
+                        }
+                    },
+                    readme: {
+                        text: ""
+                    }
+                },
+                ev: {
+                    app: {
+                        link: "https://play.google.com/store/apps/details?id=com.marcferrer.evcomparator",
+                    },
+                    readme: {
+                        text: "A project about displaying all electric vehicles and comparing them. App property of Marc Ferrer where I contributed to. (Summer 2020)"
+                    }
+                },
+                recomercem: {
+                    website: {
+                        link: "http://recomercem.es/",
+                    },
+                    github: {
+                        link: "https://github.com/albertricart/recomercem",
+                    },
+                    documentation: {
+                        link: "http://recomercem.es/projecte.html",
+                    },
+                    play: {
+                        link: "http://recomercem.es/games/catchit/index.html",
+                    },
+                    readme: {
+                        text: "A project about impulsing and helping out local businesses due to COVID-19. (Oct to Dec 2020)"
+                    }
+                },
+                cepsem: {
+                    website: {
+                        link: "#",
+                    },
+                    github: {
+                        link: "https://github.com/albertricart/cepsem",
+                    },
+                    readme: {
+                        text: "(Feb to Apr 2021)"
+                    }
+                },
+
+                internships: {
+                    artimedia: {
+                        asmadual: {
+                            website: { link: "https://www.asmadual.es/" },
+                            readme: {
+                                text: "(Jan to Feb 2021)"
+                            }
+                        },
+
+                        gescobro: {
+                            website: { link: "https://gescobro.com/en" },
+                            readme: {
+                                client: "Gescobro",
+                                date: "(Feb to Apr 2021)",
+                                desc: ""
+                            }
+                            // readme: {
+                            //     text: "(Feb to Apr 2021)"
+                            // }
+                        },
+
+                        nora: {
+                            website: { link: "#" },
+                            readme: {
+                                text: "In dev"
+                            }
+                        }
+
+                    }
+                }
             },
+
+            skills: {
+                js_snippets: {
+                    primitive_data: {
+                        link: "https://jsfiddle.net/albertricart/uayw4mv0/",
+                    },
+                    complex_data: {
+                        link: "https://jsfiddle.net/albertricart/or8q6egd/",
+                    },
+                    iterations: {
+                        link: "https://jsfiddle.net/albertricart/5k6rwtg0/1/",
+                    },
+                    callbacks_and_conditionals: {
+                        link: "https://jsfiddle.net/albertricart/s61m9o05",
+                    },
+                    objects: {
+                        link: "https://jsfiddle.net/albertricart/pqhv51nf/",
+                    },
+                    accessing_dom: {
+                        link: "https://jsfiddle.net/albertricart/grcw8y2n/",
+                    },
+                    selectors_advanced: {
+                        link: "https://jsfiddle.net/albertricart/wx6n1pfo/",
+                    },
+                    atomic_design: {
+                        link: "/demos/atomic-design/index.html",
+                    },
+                },
+
+                diw: {},
+            },
+
         },
-
-        about: {
-
-        },
-
-        contact: {
-
-        }
+        about: {},
+        contact: {}
     }
-
-
 };
 
 console.log(directories);
@@ -137,12 +244,7 @@ function manageCommand(command, argument) {
             break;
 
         case "ls":
-            if (argument) {
-                message = listDirectory(argument);
-            } else {
-                message = "";
-            }
-
+            message = listDirectory(argument);
             break;
 
         case "cat":
@@ -205,22 +307,53 @@ function manageCd(route) {
     var routeDirs = route.split('/');
 }
 
-function listDirectory(route){
-    debugger
-    //get dirs from the specified route
-    var routeDirectories = route.split('/');
+function listDirectory(route) {
+    return navigateDirectory(route);
+}
 
-    let i = 0;
-    let found = false;
-    while(!found){
+function navigateDirectory(route) {
+    debugger;
+    var message = "";
+    var prepareDirectoryFiles = [];
+    
+    if (route) {
 
-        
-        
-        i++;
+        if (route.charAt(0) == "/") {
+            //ABSOLUTE PATH
+
+            Object.keys(directories["/"]).forEach(directory => {
+                prepareDirectoryFiles.push(directory);
+            });
+
+            message = printDirectoryFiles(prepareDirectoryFiles);
+
+        } else {
+            //RELATIVE PATH
+            var pathToCurrentDir = currentDir.split('/');
+
+            //get dirs from the specified route
+            var routeDirectories = route.split('/');
+            if(currentDir.length == 1){
+                routeDirectories.unshift("/");
+            }
+
+        }
+
+        let i = 0;
+        let found = false;
+        // while (!found) {
+
+
+
+        //     i++;
+        // }
+
+    } else {
+        //list from current directory
+        message = currentDir;
     }
-    console.log(currentDir);
 
-
+    return message;
 }
 
 function createNewPrompt() {
@@ -250,6 +383,20 @@ function createNewPrompt() {
     userInput.onkeypress = manageInput;
 }
 
+function printDirectoryFiles(directories) {
+    let printDirectories = document.createElement("div");
+    printDirectories.classList.add("printDirectories");
+
+    directories.forEach(directory => {
+        let displayDirectory = document.createElement("span");
+        displayDirectory.style.color = "#2962ff";
+        displayDirectory.innerHTML = directory;
+        printDirectories.appendChild(displayDirectory);
+    });
+
+    return printDirectories.outerHTML;
+}
+
 
 function manageWelcomeInput() {
     if (welcomePrompt.value.trim() == "yes") {
@@ -276,7 +423,7 @@ function returnCommandDescription(command, long) {
     switch (command) {
         case "cd":
             if (long) {
-                message = "Command used to move around directories. Specify the desired directory to move to it.<br><br>SYNTAX__<br><b>cd [directory]</b>";
+                message = "Command used to move around directories. Specify the desired directory to move to it.<br><br>SYNTAX_<br><b>cd [directory]</b>";
             } else {
                 message = "Move around directories";
             }
@@ -284,7 +431,7 @@ function returnCommandDescription(command, long) {
 
         case "ls":
             if (long) {
-                message = "<br>ls is short for 'list'. This command enables you to list the files and directories belonging to the specified directory.<br> <br> SYNTAX__<br> <b>ls [directory]</b>";
+                message = "<br>ls is short for 'list'. This command enables you to list the files and directories belonging to the specified directory.<br> <br> SYNTAX_<br> <b>ls [directory]</b>";
             } else {
                 message = "List files and directories";
             }
@@ -292,7 +439,7 @@ function returnCommandDescription(command, long) {
 
         case "username":
             if (long) {
-                message = "<br>Allows you to change the current user. <br><br>SYNTAX__<br><b class='blueText'>username [new_user]</b>"
+                message = "<br>Allows you to change the current user. <br><br>SYNTAX_<br><b class='blueText'>username [new_user]</b>"
             } else {
                 message = "Allows you to change users";
             }
@@ -300,7 +447,7 @@ function returnCommandDescription(command, long) {
 
         case "cat":
             if (long) {
-                message = "You can view the content of a file using the 'cat' command along the specified file. <br><br>SYNTAX__<br><b>cat [filename]</b>";
+                message = "You can view the content of a file using the 'cat' command along the specified file. <br><br>SYNTAX_<br><b>cat [filename]</b>";
             } else {
                 message = "View file";
             }

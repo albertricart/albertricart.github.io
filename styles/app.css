@@ -125,9 +125,7 @@ a:active {
 }
 
 .console-container a {
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  color: white;
 }
 
 @media (max-width: 576px) {
@@ -196,6 +194,7 @@ a:active {
 }
 
 .close-console {
+  color: white;
   padding: 8px 20px;
   -webkit-transition: all ease-in-out 0.1s;
   transition: all ease-in-out 0.1s;
@@ -208,6 +207,10 @@ a:active {
 .close-console:hover {
   background-color: red;
   cursor: pointer;
+}
+
+.printDirectories span {
+  margin-right: 20px;
 }
 
 .input-console {
