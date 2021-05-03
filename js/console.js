@@ -1,16 +1,40 @@
-//TO-DO: document.title = "sectionA, recomercem, etc... | Albert Ricart" 
-
-
 var username = document.querySelector("#username");
 var dir = document.querySelector("#dir");
 var userInput = document.querySelector("#userInput");
-var console = document.querySelector(".console-container");
-var console_body = document.querySelector(".console__body");
-var welcomeWrapper = document.querySelector(".console__body__welcome");
+var consoleContainer = document.querySelector(".console-container");
+var console_body = document.querySelector(".console-body");
+var welcomeWrapper = document.querySelector(".console-body__welcome");
 var welcomePrompt = document.querySelector("#welcomePrompt");
 var commandList = ["cd", "ls", "cat", "username", "help", "man", "clear", "leave"];
+const directories = {
+    "/": {
+        home: {
 
-console.onclick = function () { userInput.focus() };
+        },
+
+        portfolio: {
+            projects:{
+                recomercem:{},
+                cepsem:{},
+                ev:{},
+            },
+        },
+
+        about: {
+
+        },
+
+        contact: {
+
+        }
+    }
+
+
+};
+
+console.log(directories);
+
+consoleContainer.onclick = function () { userInput.focus() };
 
 userInput.onkeypress = manageInput;
 welcomePrompt.oninput = manageWelcomeInput;
@@ -19,44 +43,40 @@ welcomePrompt.onkeypress = function (e) {
     if (keynum == 13) {
         if (welcomePrompt.value.trim() == "yes") {
             let displayHelpMessage = document.createElement("p");
-            displayHelpMessage.innerHTML = "Good! Before letting you free, I encourage you to type 'help' so you get an idea of what are your possibilities here. Have fun!"
+            displayHelpMessage.innerHTML = "Good! Before letting you free, I encourage you to type 'help' so you get an idea of what your possibilities are here. Checking out 'ls' is a great starting point. Have fun!"
             welcomeWrapper.appendChild(displayHelpMessage);
             welcomePrompt.disabled = true;
             userInput.disabled = false;
             userInput.focus();
         }
         else if (welcomePrompt.value.trim() == "no") {
-            window.location.href = "https://albertricart.github.io/home.html";
+            window.location.href = "./home.html";
         }
     }
 };
 
 
-
-
 var currentDir = dir.dataset.dir;
-
-var directories = [
-    ['/', ['home', 'portfolio', 'about', 'contact']],
-
-];
 
 moveToDir(currentDir);
 
 
+
+
 function moveToDir(dirName) {
-    dir.innerHTML += "C:/" + dirName + '>';
+    dir.innerHTML += "C:" + dirName + '>';
 }
 
 function manageInput(e) {
     let keynum = e.keyCode || e.which;
 
+    //on enter keypress
     if (keynum == 13) {
         //disable current input
         userInput.disabled = true;
 
         //get all prompts
-        let console_prompts = document.querySelectorAll(".console__body__prompt");
+        let console_prompts = document.querySelectorAll(".console-body__prompt");
 
         //message to display to previous prompt
         let displayMessage = document.createElement("p");
@@ -67,10 +87,7 @@ function manageInput(e) {
 
         createNewPrompt();
     }
-
 }
-
-
 
 
 function recognizeInput(input) {
@@ -111,7 +128,8 @@ function manageCommand(command, argument) {
 
         case "cd":
             if (argument) {
-                message = 'moving to...' + argument;
+                manageCd(argument);
+                message = "";
             } else {
                 message = 'specify directory...';
             }
@@ -120,7 +138,7 @@ function manageCommand(command, argument) {
 
         case "ls":
             if (argument) {
-                message = 'listing ' + argument + ' directory';
+                message = listDirectory(argument);
             } else {
                 message = "";
             }
@@ -137,27 +155,41 @@ function manageCommand(command, argument) {
             break;
 
         case "username":
-            message = 'changing username from ' + username.dataset.username + ' to...' + argument;
-            username.dataset.username = argument;
-            username.innerHTML = argument + "@portfolioAR";
+            if (argument) {
+                message = 'changing username from ' + username.dataset.username + ' to...' + argument;
+                username.dataset.username = argument;
+                username.innerHTML = argument + "@portfolioAR";
+            } else {
+                message = 'specify username';
+            }
+
             break;
 
         case "clear":
-            document.querySelectorAll(".console__body__prompt").forEach(prompt => {
+
+            if (document.querySelector(".console-body__welcome")) {
+                document.querySelector(".console-body__welcome").style.display = "none";
+            }
+
+            document.querySelectorAll(".console-body__prompt").forEach(prompt => {
                 prompt.remove();
             });
             break;
 
 
         case "man":
-            message = returnCommandDescription(argument, true);
+            if (argument) message = returnCommandDescription(argument, true);
+            else message = "Specify the command you wish to know more about.";
             break;
 
         case "leave":
-            window.location.href = "https://albertricart.github.io/home.html";
+            window.location.href = "./home.html";
             message = "";
             break;
 
+        case "":
+            message = "";
+            break;
 
         default:
             message = "'" + command + "' is not a command.";
@@ -167,10 +199,34 @@ function manageCommand(command, argument) {
     return message;
 }
 
+function manageCd(route) {
+    debugger;
+    //get dirs from the specified route
+    var routeDirs = route.split('/');
+}
+
+function listDirectory(route){
+    debugger
+    //get dirs from the specified route
+    var routeDirectories = route.split('/');
+
+    let i = 0;
+    let found = false;
+    while(!found){
+
+        
+        
+        i++;
+    }
+    console.log(currentDir);
+
+
+}
+
 function createNewPrompt() {
     //creation of new prompt
     let newPrompt = document.createElement("div");
-    newPrompt.classList.add("console__body__prompt");
+    newPrompt.classList.add("console-body__prompt");
     console_body.appendChild(newPrompt);
 
     newPrompt.appendChild(username.cloneNode(true));
@@ -180,6 +236,10 @@ function createNewPrompt() {
     newUserInput.type = "text";
     newUserInput.id = "userInput";
     newUserInput.setAttribute("autocomplete", "off");
+    newUserInput.setAttribute("autocorrect", "off");
+    newUserInput.setAttribute("autocapitalize", "off");
+    newUserInput.setAttribute("spellcheck", "false");
+    newUserInput.classList.add('input-console');
 
     userInput = newUserInput;
 
@@ -268,4 +328,8 @@ function returnCommandDescription(command, long) {
     }
 
     return message;
+}
+
+function openOnNewTab(tab) {
+    window.open(tab, "_blank");
 }
