@@ -6,7 +6,8 @@ var console_body = document.querySelector(".console-body");
 var welcomeWrapper = document.querySelector(".console-body__welcome");
 var welcomePrompt = document.querySelector("#welcomePrompt");
 var commandList = ["cd", "ls", "cat", "username", "help", "man", "clear", "leave"];
-
+var found = false;
+var checkedDirectories = [];
 
 const directories = {
 
@@ -143,6 +144,27 @@ const directories = {
 };
 
 console.log(directories);
+
+function search(obj, routeResquested) {
+    found = false;
+
+    Object.keys(obj).forEach(key => {
+
+        // console.log(`key: ${key}, value: ${obj[key]}`)
+
+        if (key == routeResquested[0]) {
+            found = true;
+            console.warn('found');
+        }
+
+        if (typeof obj[key] === 'object') {
+            if (found) {
+                checkedDirectories.push(key);
+                search(obj[key], routeResquested.slice(1))
+            }
+        }
+    })
+}
 
 consoleContainer.onclick = function () { userInput.focus() };
 
@@ -312,71 +334,36 @@ function listDirectory(route) {
     return navigateDirectory(route);
 }
 
+function cleanDirRoute(route) {
+    let cleandirs = route.split('/');
+    if (cleandirs[0] == "") {
+        cleandirs.shift();
+        cleandirs.unshift("/");
+        cleandirs = cleandirs.filter(function (el) {
+            return el != "";
+        });
+    }
+
+    return cleandirs;
+}
+
+
 function navigateDirectory(route) {
 
     var message = "";
-    var prepareDirectoryFiles = [];
 
     if (route) {
+        debugger;
+        var routeDirectories = cleanDirRoute(route);
+        var currentDirectories = cleanDirRoute(currentDir);
 
-        if (route.charAt(0) == "/") {
-            //ABSOLUTE PATH
+        search(directories["/"]["portfolio"], ["projects", "recomercem"]);
 
-            var routeDirectories = route.split('/');
-            routeDirectories.shift();
-            routeDirectories.unshift("/");
-            routeDirectories = routeDirectories.filter(function (el) {
-                return el != "";
-            });
-
-            debugger;
-            var checkDirectories = routeDirectories;
-            let i = 0
-            let found = false;
-
-            while (!found && i < checkDirectories.length) {
-                let directory = checkDirectories[i];
-                if (Object.keys(directories[directory])) {
-                    console.log();
-                }
-
-                i++;
-            }
-
-
-            if (Object.keys(directories["/"][checkDirectories[0]]).includes(checkDirectories[1])) {
-                checkDirectories.unshift(checkDirectories[0]);
-            }
-
-
-
-            // Object.keys(directories["/"]).forEach(directory => {
-            //     prepareDirectoryFiles.push(directory);
-            // });
-
-            // moveToDir(route);
-            // message = printDirectoryFiles(prepareDirectoryFiles);
-
-        } else {
-            //RELATIVE PATH
-            var pathToCurrentDir = currentDir.split('/');
-
-            //get dirs from the specified route
-            var routeDirectories = route.split('/');
-            if (currentDir.length == 1) {
-                routeDirectories.unshift("/");
-            }
-
+        console.log(checkedDirectories);
+        if (routeDirectories == checkedDirectories) {
+            moveToDir(route);
         }
 
-        let i = 0;
-        let found = false;
-        // while (!found) {
-
-
-
-        //     i++;
-        //}
 
     } else {
         //list from current directory
