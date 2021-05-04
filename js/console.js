@@ -6,7 +6,10 @@ var console_body = document.querySelector(".console-body");
 var welcomeWrapper = document.querySelector(".console-body__welcome");
 var welcomePrompt = document.querySelector("#welcomePrompt");
 var commandList = ["cd", "ls", "cat", "username", "help", "man", "clear", "leave"];
+
+
 const directories = {
+
     "/": {
         home: {},
         portfolio: {
@@ -163,15 +166,13 @@ welcomePrompt.onkeypress = function (e) {
 };
 
 
-var currentDir = dir.dataset.dir;
-
+var currentDir = "/";
 moveToDir(currentDir);
 
 
-
-
 function moveToDir(dirName) {
-    dir.innerHTML += "C:" + dirName + '>';
+    currentDir = dirName;
+    dir.innerHTML = "C:" + dirName + '>';
 }
 
 function manageInput(e) {
@@ -312,20 +313,49 @@ function listDirectory(route) {
 }
 
 function navigateDirectory(route) {
-    debugger;
+
     var message = "";
     var prepareDirectoryFiles = [];
-    
+
     if (route) {
 
         if (route.charAt(0) == "/") {
             //ABSOLUTE PATH
 
-            Object.keys(directories["/"]).forEach(directory => {
-                prepareDirectoryFiles.push(directory);
+            var routeDirectories = route.split('/');
+            routeDirectories.shift();
+            routeDirectories.unshift("/");
+            routeDirectories = routeDirectories.filter(function (el) {
+                return el != "";
             });
 
-            message = printDirectoryFiles(prepareDirectoryFiles);
+            debugger;
+            var checkDirectories = routeDirectories;
+            let i = 0
+            let found = false;
+
+            while (!found && i < checkDirectories.length) {
+                let directory = checkDirectories[i];
+                if (Object.keys(directories[directory])) {
+                    console.log();
+                }
+
+                i++;
+            }
+
+
+            if (Object.keys(directories["/"][checkDirectories[0]]).includes(checkDirectories[1])) {
+                checkDirectories.unshift(checkDirectories[0]);
+            }
+
+
+
+            // Object.keys(directories["/"]).forEach(directory => {
+            //     prepareDirectoryFiles.push(directory);
+            // });
+
+            // moveToDir(route);
+            // message = printDirectoryFiles(prepareDirectoryFiles);
 
         } else {
             //RELATIVE PATH
@@ -333,7 +363,7 @@ function navigateDirectory(route) {
 
             //get dirs from the specified route
             var routeDirectories = route.split('/');
-            if(currentDir.length == 1){
+            if (currentDir.length == 1) {
                 routeDirectories.unshift("/");
             }
 
@@ -346,7 +376,7 @@ function navigateDirectory(route) {
 
 
         //     i++;
-        // }
+        //}
 
     } else {
         //list from current directory

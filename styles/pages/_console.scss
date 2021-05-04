@@ -5,6 +5,11 @@
         background-color: #0D1321;
         font-family: 'Courier New', Courier, monospace;
         overflow: hidden;
+
+        @media (min-width: 576px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
 
     &-container {
@@ -104,8 +109,8 @@
     }
 }
 
-.printDirectories{
-    span{
+.printDirectories {
+    span {
         margin-right: 20px;
     }
 }
