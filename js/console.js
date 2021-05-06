@@ -258,8 +258,7 @@ function manageCommand(command, argument) {
 
         case "cd":
             if (argument) {
-                manageCd(argument);
-                message = "";
+                message = navigateDirectory(argument, false);
             } else {
                 message = 'specify directory...';
             }
@@ -267,7 +266,7 @@ function manageCommand(command, argument) {
             break;
 
         case "ls":
-            message = listDirectory(argument);
+            message = ls(argument);
             break;
 
         case "cat":
@@ -324,16 +323,6 @@ function manageCommand(command, argument) {
     return message;
 }
 
-function manageCd(route) {
-    debugger;
-    //get dirs from the specified route
-    var routeDirs = route.split('/');
-}
-
-function listDirectory(route) {
-    return navigateDirectory(route);
-}
-
 function cleanDirRoute(route) {
     let cleandirs = route.split('/');
     if (cleandirs[0] == "") {
@@ -347,30 +336,92 @@ function cleanDirRoute(route) {
     return cleandirs;
 }
 
+function ls(route) {
+    
+    var message ="";
+    var currentDirectories = cleanDirRoute(currentDir);
 
-function navigateDirectory(route) {
-
-    var message = "";
-
-    if (route) {
-        debugger;
-        var routeDirectories = cleanDirRoute(route);
-        var currentDirectories = cleanDirRoute(currentDir);
-
-        search(directories["/"]["portfolio"], ["projects", "recomercem"]);
-
-        console.log(checkedDirectories);
-        if (routeDirectories == checkedDirectories) {
-            moveToDir(route);
-        }
-
-
-    } else {
+    if (!route || route == ".") {
         //list from current directory
-        message = currentDir;
+        message = printDirectoryFiles(getFilesFromDir(currentDirectories));
+    } else {
+
+        if (route == ".." && currentDirectories.length > 1) {
+            message = printDirectoryFiles(getFilesFromDir(currentDirectories.pop()));
+        } else {
+            var routeDirectories = cleanDirRoute(route);
+            search(setStartingDir(currentDirectories), routeDirectories);
+
+            console.log(checkedDirectories);
+            if (arraysEqual(routeDirectories, checkedDirectories)) {
+                message = printDirectoryFiles(getFilesFromDir(routeDirectories));
+            }
+            checkedDirectories = [];
+        }
     }
 
     return message;
+}
+
+
+function navigateDirectory(route, ls) {
+    var message = "";
+    var currentDirectories = cleanDirRoute(currentDir);
+
+    if (!route || route == ".") {
+        //list from current directory
+        message = printDirectoryFiles(getFilesFromDir(currentDirectories));
+    } else {
+
+        var routeDirectories = cleanDirRoute(route);
+        search(setStartingDir(currentDirectories), routeDirectories);
+
+        console.log(checkedDirectories);
+        if (arraysEqual(routeDirectories, checkedDirectories)) {
+            if (ls) {
+                message = printDirectoryFiles(getFilesFromDir(routeDirectories));
+            } else {
+                moveToDir(route);
+            }
+        }
+        checkedDirectories = [];
+    }
+
+    return message;
+}
+
+
+
+function arraysEqual(a, b) {
+    if (a === b) return true;
+    if (a == null || b == null) return false;
+    if (a.length !== b.length) return false;
+
+    for (var i = 0; i < a.length; ++i) {
+        if (a[i] !== b[i]) return false;
+    }
+    return true;
+}
+
+function getFilesFromDir(arr) {
+    var obj = directories;
+
+    arr.forEach(key => {
+        obj = obj[key];
+    });
+
+    return Object.keys(obj);
+}
+
+function setStartingDir(arr) {
+    var obj = directories;
+    if (arr[0] != "/") {
+        arr.forEach(key => {
+            obj = obj[key];
+        });
+    }
+
+    return obj;
 }
 
 function createNewPrompt() {
