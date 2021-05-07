@@ -42,10 +42,11 @@
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 125px;
-  margin-right: 36px;
 }
 
 .main-nav {
+  margin-left: 60px;
+
 
   // Medium devices (tablets, 768px and up)
   @media (max-width: 768px) {

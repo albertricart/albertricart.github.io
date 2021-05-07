@@ -1,19 +1,28 @@
 var fab = document.getElementById('fab');
 var header = document.querySelector('.header');
-
 var lastScrollTop = 0;
 
+let wrapper = document.querySelector(".wrapper")
+let bs = BetterScroll.createBScroll('.wrapper', {
+    scrollY: true,
+    scrollbar: {
+        fade: false,
+        interactive: true,
+        scrollbarTrackClickable: true,
+        scrollbarTrackOffsetType: 'clickedPoint' // can use 'step'
+    }
+})
 
 var nav_mobile = document.querySelector(".nav-mobile");
 var mobile_button = document.querySelector(".open-menu");
 var mobile_overlay = document.querySelector(".js-overlay");
 
-mobile_button.addEventListener('click', function() {
+mobile_button.addEventListener('click', function () {
     nav_mobile.classList.toggle('active');
     mobile_overlay.classList.toggle('active');
 })
 
-mobile_overlay.addEventListener('click', function() {
+mobile_overlay.addEventListener('click', function () {
     nav_mobile.classList.remove('active');
     mobile_overlay.classList.remove('active');
 })

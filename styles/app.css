@@ -566,7 +566,10 @@ hr {
   background-repeat: no-repeat;
   background-size: contain;
   min-width: 125px;
-  margin-right: 36px;
+}
+
+.main-nav {
+  margin-left: 60px;
 }
 
 @media (max-width: 768px) {
