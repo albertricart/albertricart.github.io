@@ -1,22 +1,28 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
+a,
 a:hover,
 a:visited,
 a:link,
 a:active {
-    text-decoration: none;
+  text-decoration: none;
+  color: white;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
 
 // .container {
 //     width: 100%;

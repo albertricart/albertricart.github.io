@@ -81,15 +81,22 @@ body {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
+a,
 a:hover,
 a:visited,
 a:link,
 a:active {
   text-decoration: none;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .console-wrapper {
@@ -246,42 +253,6 @@ a:active {
   color: lime;
 }
 
-.nav {
-  min-height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.nav-trail {
-  width: 100%;
-  min-width: 165px;
-  max-width: 175px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.logo {
-  width: 200px;
-  height: 50px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-width: 180px;
-}
-
 .icon {
   fill: white;
   -webkit-transition: all 0.25s ease-in-out;
@@ -291,48 +262,6 @@ a:active {
 .icon:hover {
   fill: #5178d6;
   cursor: pointer;
-}
-
-.options-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.options {
-  font-weight: 700;
-  font-size: 20px;
-  min-width: 400px;
-  max-width: 500px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.options a {
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  color: white;
-}
-
-.cmd-link__icon {
-  width: 128px;
-  height: 64px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .button {
@@ -570,5 +499,133 @@ a:active {
           box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
   position: -webkit-sticky;
   position: sticky;
+  top: 0;
+  left: 0;
+  height: 90px;
+  padding-left: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-left: 20px;
+  }
+}
+
+.header a {
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.header a:hover {
+  opacity: 0.6;
+}
+
+.header-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 125px;
+  margin-right: 36px;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+.main-nav a {
+  margin-right: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.header-trail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cmd-link-wrapper {
+  width: 70px;
+  height: 100%;
+  background-color: black;
+  position: relative;
+}
+
+@media (min-width: 576px) {
+  .cmd-link-wrapper {
+    margin-left: 20px;
+  }
+}
+
+.cmd-link-wrapper a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.open-menu {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../assets/icons/menu.svg");
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .open-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) {
+  .open-menu {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+.open-menu:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.socials a {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .socials {
+    display: none;
+  }
 }
 /*# sourceMappingURL=app.css.map */

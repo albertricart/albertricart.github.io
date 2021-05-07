@@ -1,5 +1,113 @@
 .header {
-    background-color: $dark;
-    box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
-    position: sticky;
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 768px) {
+    padding-left: 20px;
+  }
+
+  background-color: $dark;
+  box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 90px;
+  padding-left: 32px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+
+  a {
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
+
+.header-main {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 125px;
+  margin-right: 36px;
+}
+
+.main-nav {
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  a {
+    margin-right: 20px;
+    color: white;
+    font-weight: 500;
+  }
+}
+
+.header-trail {
+  display: flex;
+  align-items: center;
+}
+
+.cmd-link-wrapper {
+  width: 70px;
+  height: 100%;
+  background-color: black;
+  position: relative;
+
+  @media (min-width: 576px) {
+    margin-left: 20px;
+  }
+
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+.open-menu{
+    @media (min-width: 768px) {
+        display: none;
+    }
+
+    @media (min-width: 576px) {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+    
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../assets/icons/menu.svg');
+    transition: all 0.2s ease;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+
+.socials{
+  a{
+    margin-left: 20px;
+  }
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
