@@ -1,3 +1,30 @@
+AOS.init({
+    once: true
+});
+
+let bs = BetterScroll.createBScroll('.portfolio-items__wrapper', {
+    scrollX: true,
+    scrollY: false,
+    mouseWheel: true,
+    scrollbar: {
+        fade: true,
+        interactive: true,
+        scrollbarTrackClickable: true
+    }
+});
+
+var portfolioItems = document.querySelectorAll('.portfolio-item');
+
+portfolioItems.forEach((item) => {
+    item.onclick = function(){
+        for(let i = 0; i < portfolioItems.length; i++){
+            portfolioItems[i].classList.remove('active');
+        }
+
+        item.classList.add('active');
+    }
+});
+
 var fab = document.getElementById('fab');
 var header = document.querySelector('.header');
 var lastScrollTop = 0;

@@ -1,93 +1,6 @@
-@mixin cardHeader($bg-color, $color) {
-    color: $color;
-    background-color: $bg-color;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
-    padding-top: 1rem;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 130px;
-}
-
-
-.langBtn {
-    display: inline-flex;
-    background-color: $color-grey;
-
-    &:hover {
-        box-shadow: inset 0px 0px 1px 3px $color-light;
-    }
-}
-
-.cardSection-wrapper {
-    margin-bottom: 2rem;
-    border-radius: 24px;
-    background-color: whitesmoke;
-    overflow: hidden;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
-
-}
-
 .header-icon {
     margin-right: 16px;
 }
-
-.diw-header {
-    @include cardHeader($diw-blue, white);
-}
-
-.recomercem-header {
-    @include cardHeader($recomercem-red, white);
-}
-
-.js-header {
-    @include cardHeader($js-yellow, black);
-}
-
-
-.ev-header {
-    @include cardHeader($ev-yellow, black);
-}
-
-.grid-item {
-    color: #24272E;
-    background-color: white;
-    border-radius: 16px;
-    transition: all 0.15s ease;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-    height: 165px;
-
-
-    &:hover {
-        transform: scale(1.025);
-        cursor: pointer;
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
-    }
-}
-
-
-
-.grid-container {
-    padding: 2rem 2rem 5rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-
-    // Medium devices (tablets, 768px and up)
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    // Extra large devices (large desktops, 1200px and up)
-    @media (min-width: 1200px) {
-        //grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 
 .itemLink {
     display: flex;
@@ -95,3 +8,74 @@
     align-items: center;
 }
 
+
+
+
+
+
+
+// .langBtn {
+//     display: inline-flex;
+//     background-color: $color-grey;
+
+//     &:hover {
+//         box-shadow: inset 0px 0px 1px 3px $color-light;
+//     }
+// }
+
+// @mixin cardHeader($bg-color, $color) {
+//     color: $color;
+//     background-color: $bg-color;
+//     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+//     padding-top: 1rem;
+//     padding-left: 1rem;
+//     padding-bottom: 1rem;
+//     border-bottom-right-radius: 12px;
+//     border-bottom-left-radius: 12px;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     height: 130px;
+// }
+
+// .grid-item {
+//     color: #24272E;
+//     background-color: white;
+//     border-radius: 16px;
+//     transition: all 0.15s ease;
+//     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+//     height: 165px;
+
+
+//     &:hover {
+//         transform: scale(1.025);
+//         cursor: pointer;
+//         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+//     }
+// }
+
+
+// .grid-container {
+//     padding: 2rem 2rem 5rem 2rem;
+//     display: grid;
+//     grid-template-columns: repeat(1, 1fr);
+//     gap: 1rem;
+
+//     // Medium devices (tablets, 768px and up)
+//     @media (min-width: 768px) {
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+
+//     // Extra large devices (large desktops, 1200px and up)
+//     @media (min-width: 1200px) {
+//         //grid-template-columns: repeat(3, 1fr);
+//     }
+// }
+
+// .cardSection-wrapper {
+//     margin-bottom: 2rem;
+//     border-radius: 24px;
+//     background-color: whitesmoke;
+//     overflow: hidden;
+//     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+// }

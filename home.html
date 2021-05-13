@@ -6,84 +6,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Albert Ricart</title>
     <link rel="shortcut icon" href="./assets/icons/icon.png" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/app.css" />
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
+    <header class="header">
 
-            <div class="header-main">
-                <a href="./index.html" class="logo" style="background-image: url('./assets/logos/logo.png');"></a>
+        <div class="header-main">
+            <a href="./index.html" class="logo" style="background-image: url('./assets/logos/logo.png');"></a>
 
-                <nav class="main-nav">
-                    <a href="#portfolio">Home</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#portfolio">About</a>
-                    <a href="#portfolio">Contact</a>
-                </nav>
+            <nav class="main-nav">
+                <a href="#home">Home</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#skills">Skills</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
 
+        </div>
+
+        <div class="header-trail">
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/albert-ricart/" target="_blank">
+                    <img src="./assets/icons/linkedin.svg" alt="linkedin_link" width="28px">
+                </a>
+
+                <a href="https://github.com/albertricart" target="_blank">
+                    <img src="./assets/icons/github.svg" alt="github_link" width="32px">
+                </a>
             </div>
 
-            <div class="header-trail">
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/albert-ricart/" target="_blank">
-                        <img src="./assets/icons/linkedin.svg" alt="linkedin_link" width="28px">
-                    </a>
+            <div class="cmd-link-wrapper">
+                <a class="cmd-link" href="index.html"></a>
+            </div>
 
-                    <a href="https://github.com/albertricart" target="_blank">
-                        <img src="./assets/icons/github.svg" alt="github_link" width="32px">
-                    </a>
-                </div>
+            <div class="open-menu"></div>
 
-                <div class="cmd-link-wrapper">
-                    <a class="cmd-link" href="index.html"></a>
-                </div>
-
-                <div class="open-menu"></div>
-
-                <!-- <div class="lang">
+            <!-- <div class="lang">
                 <button type="button" class="button langBtn">
                     <span data-language="en">English</span>
                     <img src="./assets/icons/dropdown.svg" alt="">
                 </button>
             </div> -->
 
-            </div>
-
-        </header>
-
-        <div class="nav-mobile">
-            <a href="#portfolio" class="button-icon" style="background-image: url('./assets/icons/home.svg');">Home</a>
-            <a href="#portfolio" class="button-icon" style="background-image: url('./assets/icons/portfolio.svg');">Portfolio</a>
-            <a href="#portfolio" class="button-icon" style="background-image: url('./assets/icons/about.svg');">About</a>
-            <a href="#portfolio" class="button-icon" style="background-image: url('./assets/icons/contact.svg');">Contact</a>
-            <hr>
-            <br>
-            <a href="https://github.com/albertricart" target="_blank" class="button-icon" style="background-image: url('./assets/icons/github.svg');">GitHub</a>
-            <a href="https://www.linkedin.com/in/albert-ricart/" target="_blank" class="button-icon" style="background-image: url('./assets/icons/linkedin.svg');">LinkedIn</a>
         </div>
-        <div class="nav-mobile-overlay js-overlay"></div>
+
+    </header>
+
+    <div class="nav-mobile">
+        <a href="#home" class="button-icon" style="background-image: url('./assets/icons/home.svg');">Home</a>
+        <a href="#portfolio" class="button-icon" style="background-image: url('./assets/icons/portfolio.svg');">Portfolio</a>
+        <a href="#skills" class="button-icon" style="background-image: url('./assets/icons/skills.svg');">Skills</a>
+        <a href="#about" class="button-icon" style="background-image: url('./assets/icons/about.svg');">About</a>
+        <a href="#contact" class="button-icon" style="background-image: url('./assets/icons/contact.svg');">Contact</a>
+        <hr>
+        <br>
+        <a href="https://github.com/albertricart" target="_blank" class="button-icon" style="background-image: url('./assets/icons/github.svg');">GitHub</a>
+        <a href="https://www.linkedin.com/in/albert-ricart/" target="_blank" class="button-icon" style="background-image: url('./assets/icons/linkedin.svg');">LinkedIn</a>
+    </div>
+    <div class="nav-mobile-overlay js-overlay"></div>
 
 
-        <div class="container-fluid">
-            <section id="skills" class="mt-5">
+    <section>
+        <div class="anchor" id="home"></div>
+        <div class="section-wrapper section-wrapper--home">
+
+        </div>
+    </section>
+
+    <section>
+        <div class="anchor" id="portfolio"></div>
+        <div class="section-wrapper section-wrapper--portfolio">
+            <h2 class="section-title mb-4" data-aos="fade-up">PORTFOLIO</h2>
+            <div class="portfolio-items__wrapper">
+                <div class="portfolio-items__list" data-aos="fade-up">
+                    <div class="portfolio-item active"></div>
+                    <div class="portfolio-item"></div>
+                    <div class="portfolio-item"></div>
+                    <div class="portfolio-item"></div>
+                    <div class="portfolio-item"></div>
+                    <div class="portfolio-item"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="anchor" id="skills"></div>
+        <h2 class="section-title mb-4" data-aos="fade-up">SKILLS</h2>
+        <div class="section-wrapper">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-6">Skills</div>
+                    <div class="col-lg-6"></div>
                     <div class="col-lg-6">
                         <img src="./assets/img/programming.svg" alt="">
                     </div>
                 </div>
-            </section>
-
-
-            <div class="mt-5 button button--outline button--outline--primary">SEARCH</div>
+            </div>
         </div>
+    </section>
+
+    <section>
+        <div class="anchor" id="about"></div>
+        <h2 class="section-title mb-4" data-aos="fade-up">ABOUT</h2>
+        <div class="section-wrapper">
+            
+        </div>
+    </section>
 
 
-        <!-- <div class="container">
+    <section>
+        <div class="anchor" id="contact"></div>
+        <div class="section-wrapper section-wrapper--contact" data-aos="fade-up">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">CONTACT</h2>
+                <p class="mb-5" data-aos="fade-up">Fields with an * are mandatory.</p>
+                <form action="https://formspree.io/f/mayaeedp" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="input-form">
+                                <label for="name" class="button-icon" style="background-image: url('./assets/icons/contact.svg');" data-aos="fade-up">Name</label>
+                                <input type="text" name="name" id="name" data-aos="fade-up">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="input-form">
+                                <label for="surname" class="button-icon" style="background-image: url('./assets/icons/contact.svg');" data-aos="fade-up">Surname</label>
+                                <input type="text" name="surname" id="surname" data-aos="fade-up">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-4">
+                            <div class="input-form">
+                                <label for="number" class="button-icon" style="background-image: url('./assets/icons/phone.svg');" data-aos="fade-up">Phone number</label>
+                                <input type="text" name="number" id="number" data-aos="fade-up">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 mb-5">
+                            <div class="input-form">
+                                <label for="email" class="button-icon" style="background-image: url('./assets/icons/contact.svg');" data-aos="fade-up">Email*</label>
+                                <input type="email" name="_replyto" id="email" data-aos="fade-up">
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mb-4">
+                            <div class="input-form">
+                                <label for="message" class="button-icon" style="background-image: url('./assets/icons/subject.svg');" data-aos="fade-up">Message*</label>
+                                <textarea name="message" id="message" rows="8" data-aos="fade-up"></textarea>
+                            </div>
+                        </div>
+                        <!-- your other form fields go here -->
+
+                        <div class="col-12">
+                            <button class="button button--outline button--outline--primary button--rounded" type="submit" data-aos="fade-up">SEND</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- <div class="container">
             <div class="content-wrapper">
                 <div class="content">
 
@@ -267,20 +356,17 @@
             </div>
         </div> -->
 
-        <a href="#header" class="fab" id="fab">
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path d="M13 19V7.83l4.88 4.88c.39.39 1.03.39 1.42 0 .39-.39.39-1.02 0-1.41l-6.59-6.59c-.39-.39-1.02-.39-1.41 0l-6.6 6.58c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L11 7.83V19c0 .55.45 1 1 1s1-.45 1-1z" fill="white" />
-            </svg>
-        </a>
+    <a href="#home" class="fab" id="fab">
+        <img src="./assets/icons/arrow.svg" alt="">
+    </a>
 
-        <footer class="footer">
-            <!-- <h3>Albert Ricart - 2020</h3> -->
-        </footer>
+    <!-- <footer class="footer">
+            <h3>Albert Ricart - 2020</h3>
+        </footer> -->
 
 
-    </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/better-scroll@latest/dist/better-scroll.min.js"></script>
     <script type="text/javascript" src="js\OverlayScrollbars.js"></script>
     <script type="text/javascript" src="js\app.js"></script>
