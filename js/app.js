@@ -2,16 +2,7 @@ var fab = document.getElementById('fab');
 var header = document.querySelector('.header');
 var lastScrollTop = 0;
 
-let wrapper = document.querySelector(".wrapper")
-let bs = BetterScroll.createBScroll('.wrapper', {
-    scrollY: true,
-    scrollbar: {
-        fade: false,
-        interactive: true,
-        scrollbarTrackClickable: true,
-        scrollbarTrackOffsetType: 'clickedPoint' // can use 'step'
-    }
-})
+// var instance = OverlayScrollbars(document.querySelector('.wrapper'), {}); 
 
 var nav_mobile = document.querySelector(".nav-mobile");
 var mobile_button = document.querySelector(".open-menu");

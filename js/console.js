@@ -145,27 +145,6 @@ const directories = {
 
 console.log(directories);
 
-function search(obj, routeResquested) {
-    found = false;
-
-    Object.keys(obj).forEach(key => {
-
-        // console.log(`key: ${key}, value: ${obj[key]}`)
-
-        if (key == routeResquested[0]) {
-            found = true;
-            console.warn('found');
-        }
-
-        if (typeof obj[key] === 'object') {
-            if (found) {
-                checkedDirectories.push(key);
-                search(obj[key], routeResquested.slice(1));
-            }
-        }
-    })
-}
-
 consoleContainer.onclick = function () { userInput.focus() };
 
 userInput.onkeypress = manageInput;
@@ -258,7 +237,7 @@ function manageCommand(command, argument) {
 
         case "cd":
             if (argument) {
-                message = navigateDirectory(argument, false);
+                message = navigateDirectory(argument);
             } else {
                 message = 'specify directory...';
             }
@@ -336,15 +315,37 @@ function cleanDirRoute(route) {
     return cleandirs;
 }
 
+
+function search(obj, routeResquested) {
+    found = false;
+
+    Object.keys(obj).forEach(key => {
+
+        // console.log(`key: ${key}, value: ${obj[key]}`)
+
+        if (key == routeResquested[0]) {
+            found = true;
+            console.warn('found');
+        }
+
+        if (typeof obj[key] === 'object') {
+            if (found) {
+                checkedDirectories.push(key);
+                search(obj[key], routeResquested.slice(1));
+            }
+        }
+    })
+}
+
 function ls(route) {
-    var message ="";
+    var message = "";
     var currentDirectories = cleanDirRoute(currentDir);
-    
+
     if (!route || route == ".") {
         //list from current directory
         message = printDirectoryFiles(getFilesFromDir(currentDirectories));
     } else {
-        
+
         debugger;
         if (route == ".." && currentDirectories.length > 1) {
             message = printDirectoryFiles(getFilesFromDir(currentDirectories.pop()));
@@ -364,10 +365,11 @@ function ls(route) {
 }
 
 
-function navigateDirectory(route, ls) {
+function navigateDirectory(route) {
     var message = "";
     var currentDirectories = cleanDirRoute(currentDir);
 
+    debugger;
     if (!route || route == ".") {
         //list from current directory
         message = printDirectoryFiles(getFilesFromDir(currentDirectories));
@@ -378,11 +380,7 @@ function navigateDirectory(route, ls) {
 
         console.log(checkedDirectories);
         if (arraysEqual(routeDirectories, checkedDirectories)) {
-            if (ls) {
-                message = printDirectoryFiles(getFilesFromDir(routeDirectories));
-            } else {
-                moveToDir(route);
-            }
+            moveToDir(route);
         }
         checkedDirectories = [];
     }
@@ -415,11 +413,11 @@ function getFilesFromDir(arr) {
 
 function setStartingDir(arr) {
     var obj = directories;
-    if (arr[0] != "/") {
+    // if (arr[0] != "/") {
         arr.forEach(key => {
             obj = obj[key];
         });
-    }
+    // }
 
     return obj;
 }

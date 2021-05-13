@@ -80,9 +80,9 @@
   transition: all 3s ease;
 
   &:hover {
-    width: 45px;
-    height: 45px;
-    background-image: url('../assets/icons/next.svg');
+    // width: 45px;
+    // height: 45px;
+    // background-image: url('../assets/icons/next.svg');
   }
 
   &-wrapper {
@@ -141,7 +141,7 @@
   background-color: $dark;
   box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.10);
   padding: 32px;
-  max-width: 150px;
+  max-width: 200px;
   width: 100%;
   position: fixed;
   top: 90px;
