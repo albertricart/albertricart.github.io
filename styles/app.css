@@ -233,7 +233,7 @@ button[type="submit"] {
 .section-wrapper--home {
   padding-left: 0;
   padding-right: 0;
-  height: 89vh;
+  height: calc(100vh - 90px);
   background-color: lightgoldenrodyellow;
 }
 
@@ -252,7 +252,7 @@ button[type="submit"] {
 
 .anchor {
   position: relative;
-  top: -11vh;
+  top: -90px;
   left: 0;
 }
 
@@ -433,7 +433,8 @@ button[type="submit"] {
 
 .portfolio-items__wrapper {
   width: 100vw;
-  margin-left: 15px;
+  -webkit-transform: translateX(15px);
+          transform: translateX(15px);
 }
 
 .portfolio-items__list {
@@ -447,10 +448,66 @@ button[type="submit"] {
 
 .portfolio-item {
   border-radius: 8px;
-  width: 300px;
+  width: 400px;
   margin-right: 15px;
-  height: 150px;
+  height: 225px;
   background-color: lightgreen;
+  position: relative;
+}
+
+.portfolio-item .item-image {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  background-image: url("../assets/logos/ev-logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #3e03bd;
+  -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
+          box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+}
+
+.portfolio-item .item-image h2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.portfolio-item .item-info {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: white;
+  height: 100%;
+  background-color: #131f41;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.portfolio-item .item-thumbnail {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item .item-thumbnail h2 {
+  position: absolute;
+  top: 65%;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.portfolio-item--test {
+  background-color: #e59808;
 }
 
 .portfolio-item.active {
@@ -459,6 +516,14 @@ button[type="submit"] {
 
 .portfolio-item:hover {
   cursor: pointer;
+}
+
+.portfolio-item:hover .item-info {
+  opacity: 1;
+}
+
+.portfolio-item:hover .item-thumbnail {
+  opacity: 0;
 }
 
 .footer {
@@ -474,7 +539,7 @@ button[type="submit"] {
   position: sticky;
   top: 0;
   left: 0;
-  height: 11vh;
+  height: 90px;
   padding-left: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -505,8 +570,8 @@ button[type="submit"] {
 }
 
 .header.hide {
-  -webkit-transform: translateY(-11vh);
-          transform: translateY(-11vh);
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -533,6 +598,12 @@ button[type="submit"] {
   margin-left: 60px;
 }
 
+@media (max-width: 830px) {
+  .main-nav {
+    margin-left: 45px;
+  }
+}
+
 @media (max-width: 768px) {
   .main-nav {
     display: none;
@@ -543,6 +614,12 @@ button[type="submit"] {
   margin-right: 20px;
   color: white;
   font-weight: 500;
+}
+
+@media (max-width: 830px) {
+  .main-nav a {
+    margin-right: 10px;
+  }
 }
 
 .header-trail {
@@ -639,7 +716,7 @@ button[type="submit"] {
   max-width: 200px;
   width: 100%;
   position: fixed;
-  top: 11vh;
+  top: 90px;
   bottom: 0;
   right: 0;
   -webkit-transform: translateX(105%);

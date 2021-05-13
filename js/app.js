@@ -6,6 +6,7 @@ let bs = BetterScroll.createBScroll('.portfolio-items__wrapper', {
     scrollX: true,
     scrollY: false,
     mouseWheel: true,
+    disableTouch: false,
     scrollbar: {
         fade: true,
         interactive: true,
@@ -16,8 +17,8 @@ let bs = BetterScroll.createBScroll('.portfolio-items__wrapper', {
 var portfolioItems = document.querySelectorAll('.portfolio-item');
 
 portfolioItems.forEach((item) => {
-    item.onclick = function(){
-        for(let i = 0; i < portfolioItems.length; i++){
+    item.onclick = function () {
+        for (let i = 0; i < portfolioItems.length; i++) {
             portfolioItems[i].classList.remove('active');
         }
 

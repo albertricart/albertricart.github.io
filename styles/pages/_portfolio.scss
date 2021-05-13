@@ -1,26 +1,91 @@
-.portfolio-items__wrapper{
+.portfolio-items__wrapper {
     width: 100vw;
-    margin-left: 15px;
+    transform: translateX(15px);
 }
 
-.portfolio-items__list{
+.portfolio-items__list {
     display: flex;
     width: fit-content;
 }
 
 
-.portfolio-item{
+.portfolio-item {
     border-radius: 8px;
-    width: 300px;
+    width: 400px;
     margin-right: 15px;
-    height: 150px;
+    height: 225px;
     background-color: lightgreen;
+    position: relative;
 
-    &.active{
+    .item-image {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        background-image: url('../assets/logos/ev-logo.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid $dark;
+        box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
+        border-radius: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transition: all 0.3s ease;
+        transform: translate(-50%, -90%);
+
+        h2 {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    }
+
+    .item-info {
+        transition: all 0.3s ease;
+        color: white;
+        height: 100%;
+        background-color: $c_dark_blue;
+        border-radius: inherit;
+        opacity: 0;
+    }
+
+    .item-thumbnail {
+        transition: all 0.3s ease;
+    
+        h2 {
+            position: absolute;
+            top: 65%;
+            font-weight: 700;
+            font-size: 24px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &--test {
+        background-color: $ev-yellow;
+
+        
+    }
+
+    
+
+
+    &.active {
         border: 2px solid blue;
     }
 
-    &:hover{
+    &:hover {
         cursor: pointer;
+
+        .item-info {
+            opacity: 1;
+        }
+
+        .item-thumbnail {
+            opacity: 0;
+        }
     }
 }
+

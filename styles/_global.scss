@@ -141,7 +141,7 @@ button[type="submit"] {
   &--home {
     padding-left: 0;
     padding-right: 0;
-    height: 89vh;
+    height: calc(100vh - 90px);;
     background-color: lightgoldenrodyellow;
   }
 
@@ -161,7 +161,7 @@ button[type="submit"] {
 
 .anchor {
   position: relative;
-  top: -11vh;
+  top: -90px;
   left: 0;
 }
 
