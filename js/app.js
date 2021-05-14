@@ -15,14 +15,20 @@ let bs = BetterScroll.createBScroll('.portfolio-items__wrapper', {
 });
 
 var portfolioItems = document.querySelectorAll('.portfolio-item');
+var portfolioItemsContent = document.querySelectorAll('.portfolio-item__content');
 
 portfolioItems.forEach((item) => {
     item.onclick = function () {
         for (let i = 0; i < portfolioItems.length; i++) {
             portfolioItems[i].classList.remove('active');
         }
+        for (let i = 0; i < portfolioItemsContent.length; i++) {
+            portfolioItemsContent[i].classList.remove('active');
+        }
 
         item.classList.add('active');
+        var id = item.dataset.id;
+        portfolioItemsContent[id].classList.add('active');
     }
 });
 

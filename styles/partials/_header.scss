@@ -75,7 +75,7 @@
 .cmd-link {
   width: 32px;
   height: 32px;
-  background-image: url('../assets/icons/cmd.svg');
+  background-image: url('../assets/icons/ui/cmd.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -88,7 +88,7 @@
   &:hover {
     // width: 45px;
     // height: 45px;
-    // background-image: url('../assets/icons/next.svg');
+    // background-image: url('../assets/icons/ui/next.svg');
   }
 
   &-wrapper {
@@ -112,7 +112,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('../assets/icons/menu.svg');
+  background-image: url('../assets/icons/ui/menu.svg');
   transition: all 0.2s ease;
 
   &:hover {

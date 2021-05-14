@@ -261,6 +261,82 @@ button[type="submit"] {
   bottom: -5px !important;
 }
 
+.tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tag {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 24px;
+  padding: 3px 12px 3px 42px;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  background-position: 16px 50%;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  background-color: green;
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.tag--javascript {
+  background-image: url("../assets/icons/dev/js.svg");
+}
+
+.tag--php {
+  background-image: url("../assets/icons/dev/php.svg");
+  background-size: 19px;
+}
+
+.tag--java {
+  background-image: url("../assets/icons/dev/java.svg");
+}
+
+.tag--csharp {
+  background-image: url("../assets/icons/dev/csharp.svg");
+}
+
+.tag--laravel {
+  background-image: url("../assets/icons/dev/laravel.svg");
+}
+
+.tag--vue {
+  background-image: url("../assets/icons/dev/vuejs.svg");
+}
+
+.tag--api {
+  background-image: url("../assets/icons/dev/api.svg");
+}
+
+.tag--db {
+  background-image: url("../assets/icons/dev/db.svg");
+  background-size: 13px;
+}
+
+.tag--html {
+  background-image: url("../assets/icons/dev/html.svg");
+}
+
+.tag--css {
+  background-image: url("../assets/icons/dev/css.svg");
+}
+
+.tag--sass {
+  background-image: url("../assets/icons/dev/sass.svg");
+}
+
+.tag:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .console-wrapper {
   height: 100vh;
   background-color: #0D1321;
@@ -449,9 +525,10 @@ button[type="submit"] {
 .portfolio-item {
   border-radius: 8px;
   width: 400px;
-  margin-right: 15px;
-  height: 225px;
+  margin-right: 20px;
+  min-height: 250px;
   background-color: lightgreen;
+  border: 1px solid gray;
   position: relative;
 }
 
@@ -490,6 +567,12 @@ button[type="submit"] {
   background-color: #131f41;
   border-radius: inherit;
   opacity: 0;
+  padding: 16px;
+}
+
+.portfolio-item .item-info h3 {
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .portfolio-item .item-thumbnail {
@@ -510,6 +593,14 @@ button[type="submit"] {
   background-color: #e59808;
 }
 
+.portfolio-item--nora {
+  background-color: #1f2431;
+}
+
+.portfolio-item--nora .item-thumbnail h2 {
+  color: white;
+}
+
 .portfolio-item.active {
   border: 2px solid blue;
 }
@@ -524,6 +615,18 @@ button[type="submit"] {
 
 .portfolio-item:hover .item-thumbnail {
   opacity: 0;
+}
+
+.portfolio-item__content {
+  display: none;
+  background-color: lightsalmon;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+.portfolio-item__content.active {
+  display: block;
 }
 
 .footer {
@@ -634,7 +737,7 @@ button[type="submit"] {
 .cmd-link {
   width: 32px;
   height: 32px;
-  background-image: url("../assets/icons/cmd.svg");
+  background-image: url("../assets/icons/ui/cmd.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -668,7 +771,7 @@ button[type="submit"] {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../assets/icons/menu.svg");
+  background-image: url("../assets/icons/ui/menu.svg");
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }

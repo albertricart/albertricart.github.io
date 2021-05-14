@@ -12,9 +12,10 @@
 .portfolio-item {
     border-radius: 8px;
     width: 400px;
-    margin-right: 15px;
-    height: 225px;
+    margin-right: 20px;
+    min-height: 250px;
     background-color: lightgreen;
+    border: 1px solid gray;
     position: relative;
 
     .item-image {
@@ -48,6 +49,12 @@
         background-color: $c_dark_blue;
         border-radius: inherit;
         opacity: 0;
+        padding: 16px;
+
+        h3{
+            font-weight: 600;
+            font-size: 16px;
+        }
     }
 
     .item-thumbnail {
@@ -65,12 +72,15 @@
 
     &--test {
         background-color: $ev-yellow;
-
-        
     }
 
-    
+    &--nora{
+        background-color: #1f2431;
 
+        .item-thumbnail h2{
+            color: white;
+        }
+    }
 
     &.active {
         border: 2px solid blue;
@@ -85,6 +95,18 @@
 
         .item-thumbnail {
             opacity: 0;
+        }
+    }
+
+    &__content{
+        display: none;
+        background-color: lightsalmon;
+        border-radius: 8px;
+        padding: 16px;
+        width: 100%;
+
+        &.active{
+            display: block;
         }
     }
 }

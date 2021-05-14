@@ -141,7 +141,7 @@ button[type="submit"] {
   &--home {
     padding-left: 0;
     padding-right: 0;
-    height: calc(100vh - 90px);;
+    height: calc(100vh - 90px);
     background-color: lightgoldenrodyellow;
   }
 
@@ -168,4 +168,75 @@ button[type="submit"] {
 .bscroll-horizontal-scrollbar {
   position: relative !important;
   bottom: -5px !important;
+}
+
+.tag-list{
+  display: flex;
+}
+
+.tag{
+  width: fit-content;
+  border-radius: 24px;
+  padding: 3px 12px 3px 42px;
+  font-weight: 500;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  background-position: 16px 50%;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  transition: all 0.1s ease;
+  background-color: green;
+  margin-right: 6px;
+  font-size: 14px;
+
+
+  &--javascript{
+    background-image: url('../assets/icons/dev/js.svg');
+  }
+
+  &--php{
+    background-image: url('../assets/icons/dev/php.svg');
+    background-size: 19px;
+  }
+
+  &--java{
+    background-image: url('../assets/icons/dev/java.svg');
+  }
+
+  &--csharp{
+    background-image: url('../assets/icons/dev/csharp.svg');
+  }
+
+  &--laravel{
+    background-image: url('../assets/icons/dev/laravel.svg');
+  }
+
+  &--vue{
+    background-image: url('../assets/icons/dev/vuejs.svg');
+  }
+
+  &--api{
+    background-image: url('../assets/icons/dev/api.svg');
+  }
+
+  &--db{
+    background-image: url('../assets/icons/dev/db.svg');
+    background-size: 13px;
+  }
+
+  &--html{
+    background-image: url('../assets/icons/dev/html.svg');
+  }
+
+  &--css{
+    background-image: url('../assets/icons/dev/css.svg');
+  }
+
+  &--sass{
+    background-image: url('../assets/icons/dev/sass.svg');
+  }
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
 }
