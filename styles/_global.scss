@@ -177,10 +177,10 @@ button[type="submit"] {
 .tag{
   width: fit-content;
   border-radius: 24px;
-  padding: 3px 12px 3px 42px;
+  padding: 3px 12px 3px 36px;
   font-weight: 500;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
-  background-position: 16px 50%;
+  background-position: 12px 50%;
   background-size: 16px;
   background-repeat: no-repeat;
   transition: all 0.1s ease;
@@ -233,6 +233,20 @@ button[type="submit"] {
 
   &--sass{
     background-image: url('../assets/icons/dev/sass.svg');
+  }
+
+  &--backpack{
+    background-image: url('../assets/icons/dev/backpack.svg');
+    background-size: 32px;
+    padding-left: 50px;
+  }
+
+  &--net{
+    background-image: url('../assets/icons/dev/net.svg');
+  }
+
+  &--android{
+    background-image: url('../assets/icons/dev/android.svg');
   }
 
   &:hover{

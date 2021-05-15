@@ -272,11 +272,11 @@ button[type="submit"] {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 24px;
-  padding: 3px 12px 3px 42px;
+  padding: 3px 12px 3px 36px;
   font-weight: 500;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
-  background-position: 16px 50%;
+  background-position: 12px 50%;
   background-size: 16px;
   background-repeat: no-repeat;
   -webkit-transition: all 0.1s ease;
@@ -330,6 +330,20 @@ button[type="submit"] {
 
 .tag--sass {
   background-image: url("../assets/icons/dev/sass.svg");
+}
+
+.tag--backpack {
+  background-image: url("../assets/icons/dev/backpack.svg");
+  background-size: 32px;
+  padding-left: 50px;
+}
+
+.tag--net {
+  background-image: url("../assets/icons/dev/net.svg");
+}
+
+.tag--android {
+  background-image: url("../assets/icons/dev/android.svg");
 }
 
 .tag:hover {
@@ -527,7 +541,7 @@ button[type="submit"] {
   width: 400px;
   margin-right: 20px;
   min-height: 250px;
-  background-color: lightgreen;
+  background-color: #1f2431;
   border: 1px solid gray;
   position: relative;
 }
@@ -536,10 +550,9 @@ button[type="submit"] {
   width: 100px;
   height: 100px;
   background-color: lightblue;
-  background-image: url("../assets/logos/ev-logo.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border: 1px solid #3e03bd;
   -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
@@ -576,6 +589,7 @@ button[type="submit"] {
 }
 
 .portfolio-item .item-thumbnail {
+  color: white;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -589,10 +603,6 @@ button[type="submit"] {
   width: 100%;
 }
 
-.portfolio-item--test {
-  background-color: #e59808;
-}
-
 .portfolio-item--nora {
   background-color: #1f2431;
 }
@@ -602,7 +612,7 @@ button[type="submit"] {
 }
 
 .portfolio-item.active {
-  border: 2px solid blue;
+  border: 2px solid rgba(255, 0, 255, 0.705);
 }
 
 .portfolio-item:hover {
