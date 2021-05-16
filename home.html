@@ -15,15 +15,15 @@
 <body>
     <header class="header">
 
-        <div class="header-main">
+        <div class="header-main" data-aos="fade-in">
             <a href="./index.html" class="logo" style="background-image: url('./assets/logos/logo.png');"></a>
 
             <nav class="main-nav">
-                <a href="#home">Home</a>
-                <a href="#portfolio">Portfolio</a>
-                <a href="#skills">Skills</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="#home" data-aos="fade-in">Home</a>
+                <a href="#portfolio" data-aos="fade-in">Portfolio</a>
+                <a href="#skills" data-aos="fade-in">Skills</a>
+                <a href="#about" data-aos="fade-in">About</a>
+                <a href="#contact" data-aos="fade-in">Contact</a>
             </nav>
 
         </div>
@@ -31,11 +31,11 @@
         <div class="header-trail">
             <div class="socials">
                 <a href="https://www.linkedin.com/in/albert-ricart/" target="_blank">
-                    <img src="./assets/icons/socials/linkedin.svg" alt="linkedin_link" width="28px">
+                    <img src="./assets/icons/socials/linkedin.svg" alt="linkedin_link" width="28px" data-aos="fade-in">
                 </a>
 
                 <a href="https://github.com/albertricart" target="_blank">
-                    <img src="./assets/icons/dev/github.svg" alt="github_link" width="32px">
+                    <img src="./assets/icons/dev/github.svg" alt="github_link" width="32px" data-aos="fade-in">
                 </a>
             </div>
 
@@ -73,7 +73,21 @@
     <section>
         <div class="anchor" id="home"></div>
         <div class="section-wrapper section-wrapper--home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="presentation">
+                            <h1 data-aos="fade-in">Albert Ricart</h1>
+                            <h3 data-aos="fade-in">Software Developer // Barcelona</h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <img src="./assets/img/programming.svg" alt="" data-aos="fade-in">
+                    </div>
+                </div>
+            </div>
 
+            <a href="#portfolio" class="chevron"></a>
         </div>
     </section>
 
@@ -81,12 +95,12 @@
     <section>
         <div class="anchor" id="portfolio"></div>
         <div class="section-wrapper section-wrapper--portfolio">
-            <img src="./assets/img/wavesOpacity.svg" alt="">
+            <img src="./assets/img/wavesOpacity.svg" alt="" style="padding-bottom: 100px;">
             <h2 class="section-title mb-4" data-aos="fade-up">PORTFOLIO</h2>
             <div class="portfolio-items__wrapper">
                 <div class="portfolio-items__list" data-aos="fade-up">
 
-                    <div class="portfolio-item portfolio-item--nora active" data-id="0">
+                    <div class="portfolio-item portfolio-item--nora " data-id="0">
                         <div class="item-thumbnail">
                             <div class="item-image" style="background-image: url('./assets/logos/nora-logo.png');"></div>
                             <h2>NØRA Studio (in dev)</h2>
@@ -124,7 +138,7 @@
                         </div>
                     </div>
 
-                    <div class="portfolio-item portfolio-item--cepsem" data-id="1">
+                    <div class="portfolio-item portfolio-item--cepsem active" data-id="1">
                         <div class="item-thumbnail">
                             <div class="item-image" style="background-image: url('./assets/logos/cepsem-logo.svg');"></div>
                             <h2>CEPSEM</h2>
@@ -385,56 +399,171 @@
                 </div>
             </div>
 
-            <div class="container mt-5">
+            <div class="container mt-5"style="position: relative;">
                 <div class="row">
-                    <div class="portfolio-item__content active" data-aos="fade-up">
+                    <img src="./assets/img/blob_1.svg" alt="blob" class="blob" style="top: 0%; left: -40%;">
+                    <img src="./assets/img/blob_2.svg" alt="blob" class="blob" style="top: 30%; left: 100%;">
+                    <img src="./assets/img/blob_3.svg" alt="blob" class="blob" style="top: 0%; left: 100%;">
+                    <img src="./assets/img/blob_4.svg" alt="blob" class="blob" style="top: 80%; left: -20%;">
+                    <img src="./assets/img/blob_5.svg" alt="blob" class="blob" style="top: 100%; left: 110%;">
+
+
+                    <div class="portfolio-item__content" data-aos="fade-up">
                         <h2 data-aos="fade-up">Nora Studio</h2>
 
                         <h3 data-aos="fade-up">Project Description</h3>
                         <p data-aos="fade-up">Website for an architecture and art studio.</p>
-                        
-                    </div>
-                    <div class="portfolio-item__content">
-                        <h2>Cepsem</h2>
 
-                        <h3>Project Description</h3>
-                        <p>Medical emergencies simulator for students.</p>
                     </div>
-                    <div class="portfolio-item__content">
-                        <h2>Gescobro</h2>
+                    <div class="portfolio-item__content active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h2 data-aos="fade-up">CEPSEM</h2>
 
-                        <h3>Project Description</h3>
-                        <p>Company website for Gescobro, a debt collection and payment agency.</p>
-                    </div>
-                    <div class="portfolio-item__content">
-                        <h2>Asmadual</h2>
+                                    <h3 data-aos="fade-up">Project Description</h3>
+                                    <p data-aos="fade-up">Medical emergencies responders simulator for students.</p>
 
-                        <h3>Project Description</h3>
-                        <p>Event website aimed at doctors about asthma.</p>
-                    </div>
-                    <div class="portfolio-item__content">
-                        <h2>Recomercem</h2>
+                                    <a data-aos="fade-up" href="http://daw.abp-politecnics.com/daw2b02/cepsem/public" class="target-link target-link--website" target="_blank">Check out the website</a>
+                                    <a data-aos="fade-up" href="https://github.com/albertricart/cepsem" class="target-link target-link--github" target="_blank">Code on GitHub</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <iframe src="http://daw.abp-politecnics.com/daw2b02/cepsem/public" height="800px"></iframe>
+                                </div>
+                            </div>
+                        </div>
 
-                        <h3>Project Description</h3>
-                        <p>A project about impulsing and helping out local businesses due to COVID-19.</p>
-                    </div>
-                    <div class="portfolio-item__content">
-                        <h2>EV Comparator</h2>
 
-                        <h3>Project Description</h3>
-                        <p>A project about displaying all electric vehicles and comparing them. App property of Marc Ferrer where I contributed to.</p>
                     </div>
                     <div class="portfolio-item__content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h2>Gescobro</h2>
+
+                                    <h3>Project Description</h3>
+                                    <p>Company website for Gescobro, a debt collection and payment agency.</p>
+
+
+
+                                    <a href="http://gescobro.com/" class="target-link target-link--website" target="_blank">Check out the website</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <iframe src="http://gescobro.com/" height="800px"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="portfolio-item__content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h2>Asmadual</h2>
+
+                                    <h3>Project Description</h3>
+                                    <p>Event website aimed at doctors about asthma.</p>
+
+                                    <a href="https://www.asmadual.es/" class="target-link target-link--website" target="_blank">Check out the website</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <iframe src="https://www.asmadual.es/" height="800px"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="portfolio-item__content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h2>Recomercem</h2>
+
+                                    <h3>Project Description</h3>
+                                    <p>A project about impulsing and helping out local businesses due to COVID-19.</p>
+
+                                    <a href="http://recomercem.es/" class="target-link target-link--website" target="_blank">Check out the website</a>
+                                    <a href="https://github.com/albertricart/recomercem" class="target-link target-link--github" target="_blank">Code on GitHub</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <iframe src="http://recomercem.es/" height="800px"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="portfolio-item__content">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h2>EV Comparator</h2>
+
+                                    <h3>Project Description</h3>
+                                    <p>A project about displaying all electric vehicles and comparing them. App property of Marc Ferrer I contributed to.</p>
+
+                                    <a href="https://play.google.com/store/apps/details?id=com.marcferrer.evcomparator" class="target-link target-link--android" target="_blank">Google Play Store</a>
+                                </div>
+                                <div class="col-lg-6">
+                                    <iframe src="https://www.youtube.com/embed/osL8W95Jfs8" frameborder="0" width="280px" height="800px"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="portfolio-item__content">
+
                         <h2>Chrysallis</h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h3>Project Description</h3>
+                                    <p>The goal of this project is to manage the Chrysallis Organisation events, members and administrators.</p>
 
-                        <h3>Project Description</h3>
-                        <p>The goal of this project is to manage the Chrysallis Organisation events, members and administrators.</p>
+                                    <p>I took part in the development of a project consisting in creating an Android App and a Desktop App (created with Windows Forms in C#, using the Entity Framework ORM and SQLServer), connected with an API.
+
+                                        The goal of the app is to manage the Chrysallis Organisation events, members and administrators.</p>
+
+                                    <a href="https://github.com/albertricart/Projecte-Chrysallis" class="target-link target-link--github" target="_blank">Code on GitHub (Desktop App)</a>
+                                    <a href="https://github.com/JRiberaG/MeetChrysallis" class="target-link target-link--github" target="_blank">Code on GitHub (Android App)</a>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <iframe src="https://www.youtube.com/embed/jbkJQKdb6n0" width="280px" height="500px"></iframe>
+                                    <iframe src="https://www.youtube.com/embed/58L2Cx9u9QQ"></iframe>
+
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="portfolio-item__content">
-                        <h2>MNACTEC Quiz Game</h2>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h2>MNACTEC Quiz Game</h2>
 
-                        <h3>Project Description</h3>
-                        <p>Quiz game themed about astronautics for Android developed in Android Studio. The app got featured in a new exhibition of the National Museum of Science and Industry of Catalonia (MNACTEC).</p>
+                                    <h3>Project Description</h3>
+                                    <p>Quiz game themed about astronautics for Android developed in Android Studio. The app got featured in a new exhibition of the National Museum of Science and Industry of Catalonia (MNACTEC).</p>
+
+                                    <p>I took part in the development of an Android app that got selected by the National Museum of Science and Industry of Catalonia, consisting in a quiz game themed about astronautics.
+
+                                        Our app got featured in a new exhibition that the museum was opening and was available to the public.
+                                        The app content was managed through a Windows Forms C# App that worked with JSON files.</p>
+
+                                    <a href="https://github.com/Marc-Ferrer-Castillo/QuizGame" class="target-link target-link--github" target="_blank">Code on GitHub</a>
+
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <iframe src="https://www.youtube.com/embed/6sx4PwbVpAo"></iframe>
+                                    <iframe src="https://www.youtube.com/embed/5yC7mYjmU3E"></iframe>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -444,15 +573,16 @@
     <section>
         <div class="anchor" id="skills"></div>
         <div class="section-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <h2 class="section-title mb-4" data-aos="fade-up">SKILLS</h2>
-                    <div class="col-lg-6"></div>
-                    <div class="col-lg-6">
-                        <img src="./assets/img/programming.svg" alt="">
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title mb-4" data-aos="fade-up">SKILLS</h2>
+
+            <!-- <p>Responsible
+                Researcher
+                Problem Solver
+                Attention to detail
+                Good Listener
+                Helping others
+                Working in a team environment
+                Leadership</p> -->
         </div>
     </section>
 
@@ -460,6 +590,15 @@
         <div class="anchor" id="about"></div>
         <div class="section-wrapper">
             <h2 class="section-title mb-4" data-aos="fade-up">ABOUT</h2>
+            <p>
+                I'm a 21 years old Multiplatform App Developer student at Centre d'Estudis Politècnics in Barcelona, Spain.
+
+                I'm passionate about Windows Desktop app and Android app development. I like creating well organised programs and I make attention to quality. I have experience working in a team environment since I've developed 2 major projects with other people, one of them an app featured in the mNactec National Museum.
+
+                I would describe myself as someone who likes getting things done, I always share my viewpoint about any problem or solution and I'm open to hear others opinion. If I'm working in a team, I like being heard, so do I to others. I prefer a team where everybody acts as a leader so each one is pushed to improve themselves, if not, I don't doubt about taking leadership.
+
+
+                I'm always willing to learn new stuff, whether it is in software development, technology or any other field. Even though I have some app development knowledge, I'm also starting to dive into the web development field.</p>
         </div>
     </section>
 
@@ -512,193 +651,105 @@
         </div>
     </section>
 
-    <!-- <div class="container">
-            <div class="content-wrapper">
-                <div class="content">
-
-                    <section id="portfolio">
-
-                        <section id="DIW">
-                            <div class="cardSection-wrapper">
-                                <a class="diw-header"
-                                    href="https://drive.google.com/drive/folders/0B2yOT7ruWsicfk5MNW1nbVJsQVoxRmNQYndXSDJKYjNrcG9aaDZDMDBoVlVybWxGTFNSSTA?usp=sharing"
-                                    target="_blank">
-                                    <div class="header-icon">
-                                        <img src="assets/icons/ui/web-design.png" alt="webdesign"
-                                            style="width: 75; height: 75px;">
-                                    </div>
-                                    <div class="header-body">
-                                        <h2>DIW</h2>
-                                        <p>All about user-centered design and much more.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </section>
-
-
-                        <section id="js">
-                            <div class="cardSection-wrapper">
-                                <div class="js-header">
-                                    <div class="header-icon">
-                                        <img src="./assets/icons/ui/js.svg" alt="JS Logo"
-                                            style="width: 75px; height: 75px; border: 2px solid black;">
-                                    </div>
-                                    <div class="header-body">
-                                        <h2>Javascript Code Snippets</h2>
-                                        <p>Here you can find all my progress in JavaScript.</p>
-                                    </div>
-                                </div>
-
-                                <div class="grid-container">
-                                    <a href="https://jsfiddle.net/albertricart/uayw4mv0/" target="_blank">
-                                        <div class="grid-item" id="primitive_data">
-                                            <h2>Primitive data</h2>
-                                            <p>Example showing the uses of primitive variables in JavaScript.</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://jsfiddle.net/albertricart/or8q6egd/" target="_blank">
-                                        <div class="grid-item" id="complex_data">
-                                            <h2>Complex data</h2>
-                                            <p>Example showing the uses of complex variables in JavaScript.</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://jsfiddle.net/albertricart/5k6rwtg0/1/" target="_blank">
-                                        <div class="grid-item" id="complex_data">
-                                            <h2>Multiplication tables</h2>
-                                            <p>Example showing the uses of iteration statements.</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://jsfiddle.net/albertricart/s61m9o05" target="_blank">
-                                        <div class="grid-item" id="complex_data">
-                                            <h2>Guess the number</h2>
-                                            <p>Example showing the uses of function callbacks and conditional statements.</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://jsfiddle.net/albertricart/pqhv51nf/" target="_blank">
-                                        <div class="grid-item" id="complex_data">
-                                            <h2>Working with objects</h2>
-                                            <p>Example showing the uses of sort function and object methods.</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://jsfiddle.net/albertricart/grcw8y2n/" target="_blank">
-                                        <div class="grid-item" id="complex_data">
-                                            <h2>Accessing DOM elements</h2>
-                                            <p>Example showing how to work with DOM elements in JavaScript.</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="https://jsfiddle.net/albertricart/wx6n1pfo/" target="_blank">
-                                        <div class="grid-item" id="complex_data">
-                                            <h2>Selectors</h2>
-                                            <p>Example showing a variety of JavaScript functionalities such as custom
-                                                attributes, data attributes, getElementById, querySelector, etc.</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="./demos/atomic-design/index.html" target="_blank">
-                                        <div class="grid-item" id="complex_data">
-                                            <h2>Atomic design</h2>
-                                            <p>Example showing a variety of JavaScript functionalities such as custom
-                                                attributes, data attributes, getElementById, querySelector, etc.</p>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
-
-
-                        <section id="recomercem">
-                            <div class="cardSection-wrapper">
-                                <div class="recomercem-header">
-                                    <div class="header-icon">
-                                        <a href="http://recomercem.es/" target="_blank">
-                                            <img src="./assets/logos/recomercem_logo.svg" alt="LogoRecomercem"
-                                                style="width: 200px; height: 80px; object-fit: contain; background-color: white; padding: 8px; border-radius: 8px;">
-                                        </a>
-                                    </div>
-
-                                    <div class="header-icon">
-                                        <h2>Recomercem</h2>
-                                        <p></p>
-                                    </div>
-                                </div>
-
-                                <div class="grid-container">
-                                    <a href="http://recomercem.es/" class="grid-item itemLink" target="_blank">
-                                        <h2>Recomercem website </h2>
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" height="48" viewBox="0 0 24 24" width="48">
-                                            <path d="M0 0h24v24H0z" fill="none" />
-                                            <path
-                                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
-                                                fill="black" />
-                                        </svg>
-                                    </a>
-                                    <a href="https://github.com/albertricart/recomercem" class="grid-item itemLink"
-                                        target="_blank">
-                                        <h2>Check out this project on GitHub </h2>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" class="icon"
-                                            viewBox="0 0 24 24">
-                                            <path
-                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                                                fill="black" />
-                                        </svg>
-                                    </a>
-                                    <a href="http://recomercem.es/projecte.html" class="grid-item itemLink" target="_blank">
-                                        <h2>Project Documentation</h2>
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 0 24 24" width="48">
-                                            <path d="M0 0h24v24H0V0z" fill="transparent" />
-                                            <path
-                                                d="M14.59 2.59c-.38-.38-.89-.59-1.42-.59H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8.83c0-.53-.21-1.04-.59-1.41l-4.82-4.83zM15 18H9c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1zm0-4H9c-.55 0-1-.45-1-1s.45-1 1-1h6c.55 0 1 .45 1 1s-.45 1-1 1zm-2-6V3.5L18.5 9H14c-.55 0-1-.45-1-1z"
-                                                fill="black" />
-                                        </svg>
-                                    </a>
-                                    <a href="http://recomercem.es/games/catchit/index.html" class="grid-item itemLink"
-                                        target="_blank">
-                                        <h2>Play the game I developed!</h2>
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 0 24 24" width="48">
-                                            <path
-                                                d="M15 7.29V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v4.29c0 .13.05.26.15.35l2.5 2.5c.2.2.51.2.71 0l2.5-2.5c.09-.09.14-.21.14-.35zM7.29 9H3c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1h4.29c.13 0 .26-.05.35-.15l2.5-2.5c.2-.2.2-.51 0-.71l-2.5-2.5C7.55 9.05 7.43 9 7.29 9zM9 16.71V21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-4.29c0-.13-.05-.26-.15-.35l-2.5-2.5c-.2-.2-.51-.2-.71 0l-2.5 2.5c-.09.09-.14.21-.14.35zm7.35-7.56l-2.5 2.5c-.2.2-.2.51 0 .71l2.5 2.5c.09.09.22.15.35.15H21c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1h-4.29c-.14-.01-.26.04-.36.14z"
-                                                fill="black" />
-                                        </svg>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </section>
-
-
-                        <section id="ev-comparator">
-                            <div class="cardSection-wrapper">
-                                <div class="ev-header">
-                                    <div class="header-icon">
-                                        <a href="https://play.google.com/store/apps/details?id=com.marcferrer.evcomparator">
-                                            <img src="./assets/logos/ev-logo.png" alt="EV Logo"
-                                                style="width: 90px; height: 90px;">
-                                        </a>
-                                    </div>
-
-                                    <div class="header-body">
-                                        <h2>EV Comparator</h2>
-                                        <p></p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </section>
-                    </section>
-
-                </div>
-            </div>
-        </div> -->
 
     <a href="#home" class="fab" id="fab">
         <img src="./assets/icons/ui/arrow.svg" alt="">
     </a>
+
+    <!-- <div class="container">
+            <section id="DIW">
+                <div class="cardSection-wrapper">
+                    <a class="diw-header"
+                        href="https://drive.google.com/drive/folders/0B2yOT7ruWsicfk5MNW1nbVJsQVoxRmNQYndXSDJKYjNrcG9aaDZDMDBoVlVybWxGTFNSSTA?usp=sharing"
+                        target="_blank">
+                        <div class="header-icon">
+                            <img src="assets/icons/ui/web-design.png" alt="webdesign"
+                                style="width: 75; height: 75px;">
+                        </div>
+                        <div class="header-body">
+                            <h2>DIW</h2>
+                            <p>All about user-centered design and much more.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+
+            <section id="js">
+                <div class="cardSection-wrapper">
+                    <div class="js-header">
+                        <div class="header-icon">
+                            <img src="./assets/icons/ui/js.svg" alt="JS Logo"
+                                style="width: 75px; height: 75px; border: 2px solid black;">
+                        </div>
+                        <div class="header-body">
+                            <h2>Javascript Code Snippets</h2>
+                            <p you can find all my progress in JavaScript.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-container">
+                        <a href="https://jsfiddle.net/albertricart/uayw4mv0/" target="_blank">
+                            <div class="grid-item" id="primitive_data">
+                                <h2>Primitive data</h2>
+                                <p>Example showing the uses of primitive variables in JavaScript.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://jsfiddle.net/albertricart/or8q6egd/" target="_blank">
+                            <div class="grid-item" id="complex_data">
+                                <h2>Complex data</h2>
+                                <p>Example showing the uses of complex variables in JavaScript.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://jsfiddle.net/albertricart/5k6rwtg0/1/" target="_blank">
+                            <div class="grid-item" id="complex_data">
+                                <h2>Multiplication tables</h2>
+                                <p>Example showing the uses of iteration statements.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://jsfiddle.net/albertricart/s61m9o05" target="_blank">
+                            <div class="grid-item" id="complex_data">
+                                <h2>Guess the number</h2>
+                                <p>Example showing the uses of function callbacks and conditional statements.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://jsfiddle.net/albertricart/pqhv51nf/" target="_blank">
+                            <div class="grid-item" id="complex_data">
+                                <h2>Working with objects</h2>
+                                <p>Example showing the uses of sort function and object methods.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://jsfiddle.net/albertricart/grcw8y2n/" target="_blank">
+                            <div class="grid-item" id="complex_data">
+                                <h2>Accessing DOM elements</h2>
+                                <p>Example showing how to work with DOM elements in JavaScript.</p>
+                            </div>
+                        </a>
+
+                        <a href="https://jsfiddle.net/albertricart/wx6n1pfo/" target="_blank">
+                            <div class="grid-item" id="complex_data">
+                                <h2>Selectors</h2>
+                                <p>Example showing a variety of JavaScript functionalities such as custom
+                                    attributes, data attributes, getElementById, querySelector, etc.</p>
+                            </div>
+                        </a>
+
+                        <a href="./demos/atomic-design/index.html" target="_blank">
+                            <div class="grid-item" id="complex_data">
+                                <h2>Atomic design</h2>
+                                <p>Example showing a variety of JavaScript functionalities such as custom
+                                    attributes, data attributes, getElementById, querySelector, etc.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+-->
 
     <!-- <footer class="footer">
             <h3>Albert Ricart - 2020</h3>

@@ -25,12 +25,12 @@ img {
   max-height: 100%;
 }
 
-// .container {
-//     width: 100%;
-//     max-width: 1700px;
-//     margin-left: auto;
-//     margin-right: auto;
-// }
+iframe{
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  min-height: 350px;
+}
 
 hr {
   border: 1px solid rgba(255, 255, 255, 0.9);
@@ -42,6 +42,7 @@ button[type="submit"] {
 }
 
 .button {
+  display: inline-block;
   font-family: "Roboto", sans-serif;
   width: fit-content;
   font-weight: 700;
@@ -90,10 +91,34 @@ button[type="submit"] {
   }
 }
 
+.target-link {
+  display: inline-block;
+  background-color: black;
+  border-radius: 24px;
+  background-position: calc(100% - 18px) 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding: 12px 50px 12px 18px;
+  transition: all 0.2s ease;
+
+  &--website{
+    background-image: url('../assets/icons/ui/link.svg');
+    background-size: 16px;
+  }
+
+  &--github{
+    background-image: url('../assets/icons/dev/github.svg');
+  }
+
+  &--android{
+    background-image: url('../assets/icons/dev/android.svg'); 
+  }
+}
+
 .fab {
   width: 55px;
   height: 55px;
-  background-color: #f44336;
+  background-color: $sec;
   border-radius: 50%;
   position: fixed;
   right: 24px;
@@ -129,20 +154,27 @@ button[type="submit"] {
 
     &:focus {
       border: 1px solid $diw-blue;
-      box-shadow: 0px 0px 1px 3px $electric-indigo;
+      box-shadow: 0px 0px 1px 3px $main;
     }
   }
 }
 
 .section-wrapper {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   &--home {
+    padding-top: 75px;
     padding-left: 0;
     padding-right: 0;
     height: calc(100vh - 90px);
-    background-color: lightgoldenrodyellow;
+    background-color: #FAFAFA;
+  }
+
+  &--portfolio{
+    padding-top: 0;
+    background-color: #ab84ff;
+    background-color: #D5C2FF;
   }
 
   &--contact {
@@ -153,6 +185,7 @@ button[type="submit"] {
 
 .section-title {
   font-weight: 800;
+  font-size: 50px;
 
   &--white {
     color: white;
@@ -170,11 +203,11 @@ button[type="submit"] {
   bottom: -5px !important;
 }
 
-.tag-list{
+.tag-list {
   display: flex;
 }
 
-.tag{
+.tag {
   width: fit-content;
   border-radius: 24px;
   padding: 3px 12px 3px 36px;
@@ -184,73 +217,78 @@ button[type="submit"] {
   background-size: 16px;
   background-repeat: no-repeat;
   transition: all 0.1s ease;
-  background-color: green;
+  background-color: $light;
   margin-right: 6px;
   font-size: 14px;
 
 
-  &--javascript{
+  &--javascript {
     background-image: url('../assets/icons/dev/js.svg');
   }
 
-  &--php{
+  &--php {
     background-image: url('../assets/icons/dev/php.svg');
     background-size: 19px;
   }
 
-  &--java{
+  &--java {
     background-image: url('../assets/icons/dev/java.svg');
   }
 
-  &--csharp{
+  &--csharp {
     background-image: url('../assets/icons/dev/csharp.svg');
   }
 
-  &--laravel{
+  &--laravel {
     background-image: url('../assets/icons/dev/laravel.svg');
   }
 
-  &--vue{
+  &--vue {
     background-image: url('../assets/icons/dev/vuejs.svg');
   }
 
-  &--api{
+  &--api {
     background-image: url('../assets/icons/dev/api.svg');
   }
 
-  &--db{
+  &--db {
     background-image: url('../assets/icons/dev/db.svg');
     background-size: 13px;
   }
 
-  &--html{
+  &--html {
     background-image: url('../assets/icons/dev/html.svg');
   }
 
-  &--css{
+  &--css {
     background-image: url('../assets/icons/dev/css.svg');
   }
 
-  &--sass{
+  &--sass {
     background-image: url('../assets/icons/dev/sass.svg');
   }
 
-  &--backpack{
+  &--backpack {
     background-image: url('../assets/icons/dev/backpack.svg');
     background-size: 32px;
     padding-left: 50px;
   }
 
-  &--net{
+  &--net {
     background-image: url('../assets/icons/dev/net.svg');
   }
 
-  &--android{
+  &--android {
     background-image: url('../assets/icons/dev/android.svg');
   }
 
-  &:hover{
+  &:hover {
     cursor: pointer;
     opacity: 0.8;
   }
+}
+
+.blob{
+  width: 400px;
+  position: absolute;
 }

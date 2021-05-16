@@ -100,6 +100,13 @@ img {
   max-height: 100%;
 }
 
+iframe {
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  min-height: 350px;
+}
+
 hr {
   border: 1px solid rgba(255, 255, 255, 0.9);
   width: 100%;
@@ -110,6 +117,7 @@ button[type="submit"] {
 }
 
 .button {
+  display: inline-block;
   font-family: "Roboto", sans-serif;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -162,10 +170,35 @@ button[type="submit"] {
   background-color: #3e03bd;
 }
 
+.target-link {
+  display: inline-block;
+  background-color: black;
+  border-radius: 24px;
+  background-position: calc(100% - 18px) 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding: 12px 50px 12px 18px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.target-link--website {
+  background-image: url("../assets/icons/ui/link.svg");
+  background-size: 16px;
+}
+
+.target-link--github {
+  background-image: url("../assets/icons/dev/github.svg");
+}
+
+.target-link--android {
+  background-image: url("../assets/icons/dev/android.svg");
+}
+
 .fab {
   width: 55px;
   height: 55px;
-  background-color: #f44336;
+  background-color: #ff6978;
   border-radius: 50%;
   position: fixed;
   right: 24px;
@@ -221,20 +254,27 @@ button[type="submit"] {
 .input-form input[type="email"]:focus,
 .input-form textarea:focus {
   border: 1px solid #2962ff;
-  -webkit-box-shadow: 0px 0px 1px 3px #651fffff;
-          box-shadow: 0px 0px 1px 3px #651fffff;
+  -webkit-box-shadow: 0px 0px 1px 3px #651fff;
+          box-shadow: 0px 0px 1px 3px #651fff;
 }
 
 .section-wrapper {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-wrapper--home {
+  padding-top: 75px;
   padding-left: 0;
   padding-right: 0;
   height: calc(100vh - 90px);
-  background-color: lightgoldenrodyellow;
+  background-color: #FAFAFA;
+}
+
+.section-wrapper--portfolio {
+  padding-top: 0;
+  background-color: #ab84ff;
+  background-color: #D5C2FF;
 }
 
 .section-wrapper--contact {
@@ -244,6 +284,7 @@ button[type="submit"] {
 
 .section-title {
   font-weight: 800;
+  font-size: 50px;
 }
 
 .section-title--white {
@@ -281,7 +322,7 @@ button[type="submit"] {
   background-repeat: no-repeat;
   -webkit-transition: all 0.1s ease;
   transition: all 0.1s ease;
-  background-color: green;
+  background-color: #a255ff;
   margin-right: 6px;
   font-size: 14px;
 }
@@ -349,6 +390,11 @@ button[type="submit"] {
 .tag:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.blob {
+  width: 400px;
+  position: absolute;
 }
 
 .console-wrapper {
@@ -521,10 +567,38 @@ button[type="submit"] {
           align-items: center;
 }
 
+.presentation h1 {
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.chevron {
+  position: absolute;
+  top: calc(100% - 70px);
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: url("../assets/icons/ui/down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  border-radius: 100%;
+  background-color: #ff6978;
+  -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.chevron:hover {
+  -webkit-transform: scale(1.1) rotateZ(360deg);
+          transform: scale(1.1) rotateZ(360deg);
+}
+
 .portfolio-items__wrapper {
-  width: 100vw;
-  -webkit-transform: translateX(15px);
-          transform: translateX(15px);
+  width: 95vw;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
 }
 
 .portfolio-items__list {
@@ -544,16 +618,18 @@ button[type="submit"] {
   background-color: #1f2431;
   border: 1px solid gray;
   position: relative;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .portfolio-item .item-image {
   width: 100px;
   height: 100px;
-  background-color: lightblue;
+  background-color: #0000001c;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  border: 1px solid #3e03bd;
+  border: 1px solid rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
           box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
   border-radius: 100%;
@@ -603,16 +679,8 @@ button[type="submit"] {
   width: 100%;
 }
 
-.portfolio-item--nora {
-  background-color: #1f2431;
-}
-
-.portfolio-item--nora .item-thumbnail h2 {
-  color: white;
-}
-
 .portfolio-item.active {
-  border: 2px solid rgba(255, 0, 255, 0.705);
+  border: 2px solid white;
 }
 
 .portfolio-item:hover {
@@ -628,6 +696,7 @@ button[type="submit"] {
 }
 
 .portfolio-item__content {
+  z-index: 300;
   display: none;
   background-color: lightsalmon;
   border-radius: 8px;
@@ -645,9 +714,9 @@ button[type="submit"] {
 }
 
 .header {
-  background-color: #3e03bd;
-  -webkit-box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.75);
+  background-color: rgba(62, 3, 189, 0.96);
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
   position: -webkit-sticky;
   position: sticky;
   top: 0;

@@ -1,6 +1,7 @@
 .portfolio-items__wrapper {
-    width: 100vw;
-    transform: translateX(15px);
+    width: 95vw;
+    transform: translateX(50px);
+
 }
 
 .portfolio-items__list {
@@ -17,15 +18,16 @@
     background-color: #1f2431;
     border: 1px solid gray;
     position: relative;
+    transition: opacity 0.5s ease;
 
     .item-image {
         width: 100px;
         height: 100px;
-        background-color: lightblue;
+        background-color: #0000001c;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
-        border: 1px solid $dark;
+        border: 1px solid rgba(255, 255, 255, 0.8);
         box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.45);
         border-radius: 100%;
         position: absolute;
@@ -71,16 +73,9 @@
         }
     }
 
-    &--nora{
-        background-color: #1f2431;
-
-        .item-thumbnail h2{
-            color: white;
-        }
-    }
-
+    
     &.active {
-        border: 2px solid rgba(255, 0, 255, 0.705);
+        border: 2px solid white;
     }
 
     &:hover {
@@ -96,6 +91,7 @@
     }
 
     &__content{
+        z-index: 300;
         display: none;
         background-color: lightsalmon;
         border-radius: 8px;
