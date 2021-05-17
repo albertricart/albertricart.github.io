@@ -196,6 +196,7 @@ button[type="submit"] {
 }
 
 .fab {
+  z-index: 2000;
   width: 55px;
   height: 55px;
   background-color: #ff6978;
@@ -264,17 +265,26 @@ button[type="submit"] {
 }
 
 .section-wrapper--home {
-  padding-top: 75px;
+  position: relative;
+  padding-top: 50px;
   padding-left: 0;
   padding-right: 0;
   height: calc(100vh - 90px);
-  background-color: #FAFAFA;
+  background-color: #fafafa;
+}
+
+@media (max-width: 576px) {
+  .section-wrapper--home {
+    height: 100%;
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
 }
 
 .section-wrapper--portfolio {
   padding-top: 0;
   background-color: #ab84ff;
-  background-color: #D5C2FF;
+  background-color: #d5c2ff;
 }
 
 .section-wrapper--contact {
@@ -285,6 +295,12 @@ button[type="submit"] {
 .section-title {
   font-weight: 800;
   font-size: 50px;
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 28px;
+  }
 }
 
 .section-title--white {
@@ -570,6 +586,36 @@ button[type="submit"] {
 .presentation h1 {
   font-size: 80px;
   font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .presentation h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .presentation h1 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .presentation h3 {
+    font-size: 20px;
+  }
+}
+
+.programming-img__wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+@media (max-width: 992px) {
+  .programming-img__wrapper {
+    width: 100%;
+  }
 }
 
 .chevron {

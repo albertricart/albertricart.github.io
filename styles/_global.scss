@@ -25,7 +25,7 @@ img {
   max-height: 100%;
 }
 
-iframe{
+iframe {
   border-radius: 8px;
   border: none;
   width: 100%;
@@ -101,21 +101,22 @@ button[type="submit"] {
   padding: 12px 50px 12px 18px;
   transition: all 0.2s ease;
 
-  &--website{
-    background-image: url('../assets/icons/ui/link.svg');
+  &--website {
+    background-image: url("../assets/icons/ui/link.svg");
     background-size: 16px;
   }
 
-  &--github{
-    background-image: url('../assets/icons/dev/github.svg');
+  &--github {
+    background-image: url("../assets/icons/dev/github.svg");
   }
 
-  &--android{
-    background-image: url('../assets/icons/dev/android.svg'); 
+  &--android {
+    background-image: url("../assets/icons/dev/android.svg");
   }
 }
 
 .fab {
+  z-index: 2000;
   width: 55px;
   height: 55px;
   background-color: $sec;
@@ -164,17 +165,24 @@ button[type="submit"] {
   padding-bottom: 100px;
 
   &--home {
-    padding-top: 75px;
+    position: relative;
+    padding-top: 50px;
     padding-left: 0;
     padding-right: 0;
     height: calc(100vh - 90px);
-    background-color: #FAFAFA;
+    background-color: #fafafa;
+
+    @media (max-width: 576px) {
+      height: 100%;
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
   }
 
-  &--portfolio{
+  &--portfolio {
     padding-top: 0;
     background-color: #ab84ff;
-    background-color: #D5C2FF;
+    background-color: #d5c2ff;
   }
 
   &--contact {
@@ -186,6 +194,10 @@ button[type="submit"] {
 .section-title {
   font-weight: 800;
   font-size: 50px;
+
+  @media (max-width: 576px) {
+    font-size: 28px;
+  }
 
   &--white {
     color: white;
@@ -221,65 +233,64 @@ button[type="submit"] {
   margin-right: 6px;
   font-size: 14px;
 
-
   &--javascript {
-    background-image: url('../assets/icons/dev/js.svg');
+    background-image: url("../assets/icons/dev/js.svg");
   }
 
   &--php {
-    background-image: url('../assets/icons/dev/php.svg');
+    background-image: url("../assets/icons/dev/php.svg");
     background-size: 19px;
   }
 
   &--java {
-    background-image: url('../assets/icons/dev/java.svg');
+    background-image: url("../assets/icons/dev/java.svg");
   }
 
   &--csharp {
-    background-image: url('../assets/icons/dev/csharp.svg');
+    background-image: url("../assets/icons/dev/csharp.svg");
   }
 
   &--laravel {
-    background-image: url('../assets/icons/dev/laravel.svg');
+    background-image: url("../assets/icons/dev/laravel.svg");
   }
 
   &--vue {
-    background-image: url('../assets/icons/dev/vuejs.svg');
+    background-image: url("../assets/icons/dev/vuejs.svg");
   }
 
   &--api {
-    background-image: url('../assets/icons/dev/api.svg');
+    background-image: url("../assets/icons/dev/api.svg");
   }
 
   &--db {
-    background-image: url('../assets/icons/dev/db.svg');
+    background-image: url("../assets/icons/dev/db.svg");
     background-size: 13px;
   }
 
   &--html {
-    background-image: url('../assets/icons/dev/html.svg');
+    background-image: url("../assets/icons/dev/html.svg");
   }
 
   &--css {
-    background-image: url('../assets/icons/dev/css.svg');
+    background-image: url("../assets/icons/dev/css.svg");
   }
 
   &--sass {
-    background-image: url('../assets/icons/dev/sass.svg');
+    background-image: url("../assets/icons/dev/sass.svg");
   }
 
   &--backpack {
-    background-image: url('../assets/icons/dev/backpack.svg');
+    background-image: url("../assets/icons/dev/backpack.svg");
     background-size: 32px;
     padding-left: 50px;
   }
 
   &--net {
-    background-image: url('../assets/icons/dev/net.svg');
+    background-image: url("../assets/icons/dev/net.svg");
   }
 
   &--android {
-    background-image: url('../assets/icons/dev/android.svg');
+    background-image: url("../assets/icons/dev/android.svg");
   }
 
   &:hover {
@@ -288,7 +299,7 @@ button[type="submit"] {
   }
 }
 
-.blob{
+.blob {
   width: 400px;
   position: absolute;
 }

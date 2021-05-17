@@ -13,7 +13,34 @@
     h1{
         font-size: 80px;
         font-weight: 800;
+
+        @media (max-width: 768px) {
+            font-size: 50px;
+        }
+
+        
+        @media (max-width: 576px) {
+            font-size: 35px;
+        }
+        
     }
+
+    h3{
+        @media (max-width: 576px) {
+            font-size: 20px;
+        }
+    }
+}
+
+.programming-img__wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+    
+    
 }
 
 
