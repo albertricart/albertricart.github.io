@@ -20,6 +20,18 @@
     position: relative;
     transition: opacity 0.5s ease;
 
+    &__content{
+        font-weight: 500;
+        h2{
+            font-size: 38px;
+            font-weight: 900;
+        }
+
+        h3{
+            font-size: 22px;
+        }
+    }
+
     .item-image {
         width: 100px;
         height: 100px;
@@ -104,3 +116,13 @@
     }
 }
 
+.project-links{
+    .target-link{
+        background-color: $c_dark_blue;
+        transition: opacity 0.1s ease;
+
+        &:hover{
+            opacity: 0.85;
+        }
+    }
+}

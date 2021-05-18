@@ -668,6 +668,19 @@ button[type="submit"] {
   transition: opacity 0.5s ease;
 }
 
+.portfolio-item__content {
+  font-weight: 500;
+}
+
+.portfolio-item__content h2 {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.portfolio-item__content h3 {
+  font-size: 22px;
+}
+
 .portfolio-item .item-image {
   width: 100px;
   height: 100px;
@@ -752,6 +765,16 @@ button[type="submit"] {
 
 .portfolio-item__content.active {
   display: block;
+}
+
+.project-links .target-link {
+  background-color: #131f41;
+  -webkit-transition: opacity 0.1s ease;
+  transition: opacity 0.1s ease;
+}
+
+.project-links .target-link:hover {
+  opacity: 0.85;
 }
 
 .footer {
