@@ -777,6 +777,45 @@ button[type="submit"] {
   opacity: 0.85;
 }
 
+.skills-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills-section h3 {
+  border-right: 3px solid white;
+}
+
+@media (max-width: 992px) {
+  .skills-section h3 {
+    border-right: none;
+  }
+}
+
+.skills-list img {
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 70px;
+  -webkit-transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease;
+}
+
+@media (max-width: 576px) {
+  .skills-list img {
+    margin-right: 15px;
+    width: 40px;
+    margin-left: 0;
+  }
+}
+
+.skills-list img:hover {
+  opacity: 0.75;
+}
+
 .footer {
   text-align: center;
   height: 5vh;
