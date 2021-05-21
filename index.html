@@ -6,12 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Albert Ricart</title>
   <link rel="shortcut icon" href="./assets/icons/icon.png" />
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/app.css" />
 </head>
 
 <body>
+
   <div class="console-wrapper">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <div>
+        <p class="mb-2"><strong>Work in Progress</strong></p>
+        <p class="mb-1">Web portfolio is completed.</p>
+        <p class="mb-0">Console version is currently @80% completed...</p>
+      </div>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+
     <div class="console-container">
       <div class="console-header">
         <div class="console-header__icon">>_ Command Prompt</div>
@@ -22,28 +35,24 @@
         <div class="console-body__welcome">
           <p style="margin-top: 0;">Oh hi!</p>
 
-          <p>Welcome, this doesn't seem like the usual portfolio home page? <br> Let me introduce myself, I'm <strong
-              class="blueText">Albert Ricart</strong>, a 20 year old studying <strong class="blueText">web
-              development</strong> with previous knowledge in <a style="text-decoration: underline;" href="#"><strong class="blueText">app
+          <p>Welcome, this doesn't seem like the usual portfolio home page? <br> Let me introduce myself, I'm <strong class="blueText">Albert Ricart</strong>, a 20 year old studying <strong class="blueText">web
+              development</strong> with previous knowledge in <a style="text-decoration: none;" href="#"><strong class="blueText">app
                 development</strong></a>.</p>
 
           <p>The main purpose of this <strong class="blueText">console</strong> I created is for you to freely move
             wherever section you want and get to know me better as you go on.</p>
 
-          <p style="margin-bottom: 0px;">So, if you want to make this visit to my portfolio a bit <strong
-              class="blueText">different</strong>, type '<span class="greenText">yes</span>' and press 'Enter', if not
+          <p style="margin-bottom: 0px;">So, if you want to make this visit to my portfolio a bit <strong class="blueText">different</strong>, type '<span class="greenText">yes</span>' and press 'Enter', if not
             then you will be
             redirected to a more traditional looking type portfolio by typing '<span class="orangeText">no</span>' and
             pressing 'Enter'...
           </p>
 
-          <input type="text" id="welcomePrompt" class="input-console" style="font-weight: bold;" autofocus
-            autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <input type="text" id="welcomePrompt" class="input-console" style="font-weight: bold;" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         </div>
 
         <div class="console-body__prompt">
-          <span id="username" data-username="visitor" style="margin-right: 8px;">visitor@portfolioAR</span><span
-            id="dir"></span>
+          <span id="username" data-username="visitor" style="margin-right: 8px;">visitor@portfolioAR</span><span id="dir"></span>
           <input type="text" id="userInput" class="input-console" disabled autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
         </div>
 
@@ -53,9 +62,9 @@
   </div>
 
 
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src='js/console.js'></script>
 </body>
 

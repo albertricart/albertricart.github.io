@@ -9,6 +9,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
+  color: #333;
 }
 
 a,
@@ -180,9 +181,24 @@ button[type="submit"] {
   }
 
   &--portfolio {
+    z-index: 1000;
     padding-top: 0;
-    background-color: #ab84ff;
+    // background-color: #ab84ff;
     background-color: #d5c2ff;
+  }
+
+  &--about {
+    // background-color: #d5c2ff;
+    background-color: #e8ddff;
+
+    p {
+      margin-top: 20px;
+      background-color: #465fa7;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+      line-height: 1.7;
+    }
   }
 
   &--contact {
@@ -302,4 +318,23 @@ button[type="submit"] {
 .blob {
   width: 400px;
   position: absolute;
+}
+
+.alert {
+  font-family: 'Inter';
+  max-width: 650px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #856404;
+
+  button{
+    outline: none;
+  }
+
+  a {
+    font-weight: 500;
+    text-decoration: underline;
+    color: #856404;
+  }
 }

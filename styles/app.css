@@ -84,6 +84,7 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   overflow-x: hidden;
+  color: #333;
 }
 
 a,
@@ -282,9 +283,22 @@ button[type="submit"] {
 }
 
 .section-wrapper--portfolio {
+  z-index: 1000;
   padding-top: 0;
-  background-color: #ab84ff;
   background-color: #d5c2ff;
+}
+
+.section-wrapper--about {
+  background-color: #e8ddff;
+}
+
+.section-wrapper--about p {
+  margin-top: 20px;
+  background-color: #465fa7;
+  color: white;
+  padding: 16px;
+  border-radius: 4px;
+  line-height: 1.7;
 }
 
 .section-wrapper--contact {
@@ -411,6 +425,25 @@ button[type="submit"] {
 .blob {
   width: 400px;
   position: absolute;
+}
+
+.alert {
+  font-family: 'Inter';
+  max-width: 650px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #856404;
+}
+
+.alert button {
+  outline: none;
+}
+
+.alert a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #856404;
 }
 
 .console-wrapper {
@@ -757,7 +790,7 @@ button[type="submit"] {
 .portfolio-item__content {
   z-index: 300;
   display: none;
-  background-color: lightsalmon;
+  background-color: #e8ddff;
   border-radius: 8px;
   padding: 16px;
   width: 100%;
@@ -765,6 +798,10 @@ button[type="submit"] {
 
 .portfolio-item__content.active {
   display: block;
+}
+
+.portfolio-item__content h3 {
+  font-weight: 700;
 }
 
 .project-links .target-link {
@@ -787,12 +824,14 @@ button[type="submit"] {
 }
 
 .skills-section h3 {
+  font-size: 24px;
   border-right: 3px solid white;
 }
 
 @media (max-width: 992px) {
   .skills-section h3 {
     border-right: none;
+    font-size: 20px;
   }
 }
 
@@ -804,16 +843,16 @@ button[type="submit"] {
   transition: opacity 0.15s ease;
 }
 
+.skills-list img:hover {
+  opacity: 0.65 !important;
+}
+
 @media (max-width: 576px) {
   .skills-list img {
     margin-right: 15px;
     width: 40px;
     margin-left: 0;
   }
-}
-
-.skills-list img:hover {
-  opacity: 0.75;
 }
 
 .footer {
