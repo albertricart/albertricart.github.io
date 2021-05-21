@@ -1,7 +1,17 @@
+.portfolio-intro {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+        font-weight: 500;
+        font-size: 22px;
+    }
+}
+
 .portfolio-items__wrapper {
     width: 95vw;
     transform: translateX(50px);
-
 }
 
 .portfolio-items__list {
@@ -20,14 +30,15 @@
     position: relative;
     transition: opacity 0.5s ease;
 
-    &__content{
+    &__content {
         font-weight: 500;
-        h2{
+
+        h2 {
             font-size: 38px;
             font-weight: 900;
         }
 
-        h3{
+        h3 {
             font-size: 22px;
         }
     }
@@ -65,7 +76,7 @@
         opacity: 0;
         padding: 16px;
 
-        h3{
+        h3 {
             font-weight: 600;
             font-size: 16px;
         }
@@ -74,7 +85,7 @@
     .item-thumbnail {
         color: white;
         transition: all 0.3s ease;
-    
+
         h2 {
             position: absolute;
             top: 65%;
@@ -85,7 +96,7 @@
         }
     }
 
-    
+
     &.active {
         border: 2px solid white;
     }
@@ -102,45 +113,50 @@
         }
     }
 
-    &__content{
+    &__content {
         z-index: 300;
         display: none;
         // background-color: lightsalmon;
-        background-color: #e8ddff;
+        background-color: rgba(231, 219, 255, 0.95);
         border-radius: 8px;
         padding: 16px;
         width: 100%;
 
-        &.active{
+        &.active {
             display: block;
         }
 
-        h3{
+        h3 {
             font-weight: 700;
+        }
+
+        .container {
+            padding-top: 25px;
+            padding-bottom: 30px;
         }
     }
 }
 
-.project-links{
-    .target-link{
+.project-links {
+    .target-link {
         background-color: $c_dark_blue;
         transition: opacity 0.1s ease;
 
-        &:hover{
+        &:hover {
             opacity: 0.85;
         }
     }
 }
 
 
-.skills-section{
+.skills-section {
     display: flex;
     align-items: center;
 
-    h3{
+    h3 {
         font-size: 24px;
         border-right: 3px solid white;
-        
+
 
         @media (max-width:992px) {
             border-right: none;
@@ -149,14 +165,15 @@
     }
 }
 
-.skills-list{
-    img{
+.skills-list {
+    img {
         margin-left: 20px;
         margin-right: 30px;
         width: 70px;
         transition: opacity 0.15s ease;
-        &:hover{
-            opacity: 0.65 !important;   
+
+        &:hover {
+            opacity: 0.65 !important;
         }
 
         @media (max-width: 576px) {
