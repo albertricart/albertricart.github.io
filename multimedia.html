@@ -18,6 +18,24 @@
         button, p, label{
             font-size: 1rem;
         }
+
+        button{
+            border: none;
+            border-radius: 24px;
+            padding: 3px 18px;
+            background-color: #333;
+            color: white;
+        }
+
+        *{
+            color: #333;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #e8ddff;
+        }
     </style>
 </head>
 
@@ -25,10 +43,10 @@
     <div class="accessibilitat">
         
         <div class="container-fluid m-5">
-            <h1>Audio Test</h1>
+            <h1><b>Audio Test</b></h1>
             <div>
-                <p id="currentTime"></p>
-                <p id="audioInfo"></p>
+                <p><strong id="currentTime"></strong></p>
+                <p><strong id="audioInfo"></strong></p>
                 <audio id="audio" src="http://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3" preload="auto" type="audio/mpeg"></audio>
                 <button id="play">Play</button>
                 <button id="stop">Stop</button>
@@ -45,7 +63,7 @@
                     
                     <p></p>
                 </div>
-    
+<!--     
                 <p class="mt-4">Visual</p>
                 
                 <div class="input-wrapper">
@@ -67,7 +85,7 @@
                     <label for="z">Tritanopia</label>
                     <input type="radio" name="visual" id="z" value="">
                 </div>
-    
+     -->
             </div>
         </div>
     </div>
@@ -122,7 +140,7 @@
                     if (audioPercentage > 0 && audioPercentage <= 20) {
                         audioInfo.style.color = "red";
                     } else if (audioPercentage > 20 && audioPercentage <= 60) {
-                        audioInfo.style.color = "orange";
+                        audioInfo.style.color = "#214fb7";
                     } else if (audioPercentage > 60) {
                         audioInfo.style.color = "green";
                     }
