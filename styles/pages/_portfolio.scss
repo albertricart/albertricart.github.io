@@ -119,7 +119,7 @@
         // background-color: lightsalmon;
         background-color: rgba(231, 219, 255, 0.95);
         border-radius: 8px;
-        padding: 16px;
+        padding: 30px;
         width: 100%;
 
         &.active {
@@ -131,8 +131,8 @@
         }
 
         .container {
-            padding-top: 25px;
-            padding-bottom: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
     }
 }
