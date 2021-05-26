@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibilitat Multimèdia</title>
+    <title>Multimèdia</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/app.css" />
 
@@ -55,67 +55,9 @@
             </div>
 
 
-            <div class="accessibilitat-opcions mt-5">
-                <div class="input-wrapper">
-                    <label for="fontSize" id="displaySize">Mida de la lletra: 16px</label>
-                    <br>
-                    <input type="range" name="fontSize" id="fontSize" min="1" max="100" step="1" value="16" oninput="modifyFontSize(this.value)" onchange="modifyFontSize(this.value)" style="width: 300px;">
-                    
-                    <p></p>
-                </div>
-<!--     
-                <p class="mt-4">Visual</p>
-                
-                <div class="input-wrapper">
-                    <label for="tritanomal">Tritanomal</label>
-                    <input type="radio" name="visual" id="tritanomal" value="">
-                </div>
-
-                <div class="input-wrapper">
-                    <label for="x">Protanopia</label>
-                    <input type="radio" name="visual" id="x" value="">
-                </div>
-
-                <div class="input-wrapper mt-1">
-                    <label for="y">Deuteranopia</label>
-                    <input type="radio" name="visual" id="y" value="">    
-                </div>
-
-                <div class="input-wrapper mt-1">
-                    <label for="z">Tritanopia</label>
-                    <input type="radio" name="visual" id="z" value="">
-                </div>
-     -->
-            </div>
+        
         </div>
     </div>
-
-    <script>
-        var buttons = document.getElementsByTagName('button');
-        var ps = document.getElementsByTagName('p');
-        var labels = document.getElementsByTagName('label');
-        var titles = document.getElementsByTagName('h1');
-        var rangeFont = document.getElementById('fontSize');
-        var labelFontSize = document.getElementById('displaySize');
-
-        //http://www.color-blindness.com/coblis-color-blindness-simulator/
-        //https://www.go-globe.com/make-your-website-accessible-to-visually-impaired-user/
-        //https://webaim.org/articles/visual/colorblind -->
-
-        function modifyFontSize(fontSize){
-            labelFontSize.innerHTML = "Mida de la lletra: " + fontSize + "px.";
-            var elems = [...buttons, ...ps, ...labels];
-                        
-            elems.forEach((elem) => {
-                elem.style.fontSize = fontSize + "px";
-            });
-
-            Array.prototype.slice.call(titles).forEach((title) => {
-                title.style.fontSize = (fontSize * 2.2) + "px";
-            });
-        }
-
-    </script>
 
 
     <script>
